@@ -41,10 +41,13 @@ nav {
 }
 
 nav img {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
 }
-
+.logo {
+  display: flex;
+  align-items: center;
+}
 .product img {
   width: 250px;
   height: 250px;
@@ -58,6 +61,7 @@ nav{
 .links {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 85%;
   margin: 0 auto;
   height: inherit;
