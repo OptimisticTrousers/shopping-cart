@@ -22,13 +22,18 @@ nav {
 }
 
 main {
+  width: 100%;
 }
 
 .products {
+  width: 50%;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   
 }
 
-.product {
+img {
+  width: 100px;
+  height: 100px;
 }
