@@ -3,6 +3,9 @@ export default function Shop() {
         <main>
             <h1>Get Clothing!</h1>
             <p>Times are tough. Liven up with our top-notch clothing!</p>
+            <div className="products">
+
+            </div>
         </main>
     )
 }
