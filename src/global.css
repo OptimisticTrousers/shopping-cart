@@ -27,11 +27,12 @@ nav {
 
 .products {
   padding-top: 2rem;
-  width: 50%;
+  width: 85%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 8rem;
+  row-gap: 2rem;
 }
 
 .product {
@@ -39,11 +40,27 @@ nav {
   background-color: white;
 }
 
-img {
+nav img {
+  width: 100px;
+  height: 100px;
+}
+
+.product img {
   width: 250px;
   height: 250px;
   object-fit: contain;
   mix-blend-mode: multiply;
+}
+
+nav{
+  width: 100%;
+}
+.links {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+  height: inherit;
 }
 
 .product-image {
