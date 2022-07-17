@@ -5,10 +5,10 @@ export default function ProductCard({image, rating, title, price}) {
                 <img src={image} alt={title}/>
             </div>
             <div className="product-rating">
-                <p>{rating.rate} {rating.count} Total Reviews</p>
+                <p>{rating.rate} {rating.count} Reviews</p>
             </div>
             <p>{title}</p>
-            <p>{price}</p>
+            <p>${price}</p>
         </div>
     )
 }
