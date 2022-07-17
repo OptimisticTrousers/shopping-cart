@@ -16,8 +16,12 @@ export default function Shop() {
     })
 
     return (
-        <div className="products">
-            {renderedProducts}
+        <div className="shop">
+            <h1>Get Clothing!</h1>
+            <p>Times are tough. Liven up with our top-notch clothing!</p>
+            <div className="products">
+                {renderedProducts}
+            </div>
         </div>
     )
 }
