@@ -12,7 +12,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
     <Routes>
-      <Route path="shop" element={<Shop />} />
+      <Route path="/" element={<App />} >
+        <Route path="shop" element={<Shop />} />
+      </Route>
     </Routes>
     </BrowserRouter>
   </React.StrictMode>
