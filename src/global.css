@@ -77,10 +77,18 @@ nav img {
   align-items: center;
 }
 .product img {
-  width: 250px;
+  width: 50%;
   height: 250px;
   object-fit: contain;
   mix-blend-mode: multiply;
+}
+
+.product-image {
+
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0rem;
+  border-bottom: 3px solid #f5f3ff;
 }
 
 nav{
@@ -94,13 +102,6 @@ nav{
   margin: 0 auto;
   height: inherit;
   gap: 1rem;
-}
-
-.product-image {
-
-  margin: 0 auto;
-  padding: 3rem 0;
-  border-bottom: 3px solid #f5f3ff;
 }
 
 main {
@@ -391,6 +392,10 @@ img.left-arrow{
     width: 100%;
   }
 
+  #root > div > nav > div > a{
+    padding-right: 1rem;
+  }
+
   .buttons > button {
     width: 200px;
   }
@@ -399,6 +404,9 @@ img.left-arrow{
   }
   .links {
     width: 100%;
+  }
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
 }
