@@ -10,7 +10,11 @@ export default function CartItem({image, title, price, quantity}) {
                     <p>Price</p>
                 </div>
                 <div className="user-input">
-                    <p>quantity</p>
+                    <div className="quantity">
+                        <button type="button">+</button>
+                        <p className="quantity-display">0</p>
+                        <button type="button">-</button>
+                    </div>
                     <p>Delete</p>
                 </div>
             </div>
