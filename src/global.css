@@ -241,3 +241,43 @@ h1.cart-title{
 #root > div > main > div > div.cart > div:nth-child(9){
   border-bottom: 3px dashed #f0f0f0;
 }
+
+.buttons > button {
+  display: block;
+  margin: 0 auto;
+  margin-top:2rem;
+  width: 300px;
+  height: 40px;
+}
+
+.buttons > button:nth-child(1) {
+
+  background-color: #0085fe;
+  border: none;
+  color: white;
+}
+
+.buttons > button:nth-child(2) {
+
+  border: none;
+  background-color: white;
+}
+.buttons {
+  margin-top: 2rem;
+}
+
+button > img{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+img.right-arrow{
+  width: 20px;
+  padding-left: 5px;
+  height: 20px;
+}
+
+img.left-arrow{
+  width: 20px;
+  height: 20px;
+}

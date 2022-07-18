@@ -1,5 +1,7 @@
 import CartItem from "./CartItem"
 import logo from '../assets/optimistictrousers.jpg'
+import rightArrow from '../assets/right-arrow.svg'
+import leftArrow from '../assets/left-arrow.svg'
 
 export default function Cart() {
 
@@ -30,8 +32,8 @@ export default function Cart() {
                 </div>
             </div>
             <div className="buttons">
-                <button type="button">Check Out</button>
-                <button type="button">Back To Products</button>
+                <button type="button">Check Out<img className="right-arrow" src={rightArrow} alt="right arrow"/></button>
+                <button type="button"><img className="left-arrow" src={leftArrow} alt="left arrow" /> Back To Products</button>
             </div>
         </div>
     )
