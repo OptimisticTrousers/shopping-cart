@@ -95,14 +95,14 @@ nav {
 .cart {
 
   background-color: white;
-  padding-top: 2rem;
   border-radius: 20px;
 }
 
-h1.card-title {
-  text-align: center;
+h1.cart-title{
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-bottom: 2rem;
 }
-
 .card-item-details {
   width: 100%;
 }
