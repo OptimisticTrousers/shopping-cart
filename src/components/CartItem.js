@@ -1,7 +1,9 @@
 export default function CartItem({image, title, price, quantity}) {
     return (
         <div className="card-item-container">
-            <img src={image} alt={title}/>
+            <div className="item-image">
+                <img src={image} alt={title}/>
+            </div>
             <div className="card-item-details">
                 <div className="item-detail">
                     <h2>Title</h2>

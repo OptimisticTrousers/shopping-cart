@@ -95,8 +95,26 @@ nav {
 }
 
 .card-item-container {
-  width: 100%;
+  width: 92%;
   display: flex;
   border-top: 1px solid #f0f0f0;
   border-bottom: 1px solid #f0f0f0;
+  padding: 2rem;
+  margin: 0 auto;
+}
+.item-image {
+  background-color: #f0f0f0;
+  padding: 0 2rem;
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+  border-radius: 20px;
+}
+
+.item-image > img {
+  mix-blend-mode: multiply;
+}
+
+.item-detail {
+  display: flex;
+  justify-content: space-between;
 }
