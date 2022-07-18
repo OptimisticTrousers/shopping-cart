@@ -12,7 +12,6 @@ export default function Cart() {
                 <CartItem image={logo}/>
                 <CartItem image={logo}/>
                 <CartItem image={logo}/>
-
             </div>
             <p>SUBTOTAL</p>
             <div className="buttons">

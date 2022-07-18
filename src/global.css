@@ -75,7 +75,7 @@ nav{
 }
 
 main {
-  background-color: orange;
+  background-color: #e8e8e8;
 }
 
 nav {
@@ -85,4 +85,18 @@ nav {
   height: 100px;
   background-color: white;
   border-bottom: 3px solid #f5f3ff;
+}
+
+.cart-container {
+  width: 85%;
+  background-color: white;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.card-item-container {
+  width: 100%;
+  display: flex;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
 }
