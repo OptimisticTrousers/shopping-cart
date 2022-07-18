@@ -159,6 +159,7 @@ p.quantity-display {
   font-weight: 600;
 }
 
+/* link to get hex to filter converter https://codepen.io/sosuke/pen/Pjoqqp */
 .trash-image {
   width: 30px;
   filter: invert(63%) sepia(0%) saturate(42%) hue-rotate(244deg) brightness(95%) contrast(89%);
@@ -167,6 +168,13 @@ p.quantity-display {
 .delete > .text {
   font-size: 20px;
   color: #969696;
+}
+
+.delete > .text:hover {
+  font-size: 20px;
+  transition: all ease-in-out 0.2s;
+  color: #b7b7b7;
+  cursor: pointer;
 }
 .quantity button:nth-child(1) {
   border-top-left-radius: 20px;
@@ -180,6 +188,7 @@ p.quantity-display {
 
 .quantity button:hover {
   background-color: #e8e8e8;
+  cursor: pointer;
 }
 
 h1.cart-title{
@@ -258,6 +267,20 @@ h1.cart-title{
   background-color: #0085fe;
   border: none;
   color: white;
+}
+
+.buttons > button:nth-child(1):hover {
+
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+  background-color: #2660A4;
+}
+
+.buttons > button:nth-child(2):hover {
+
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+  background-color: #f5f3ff;
 }
 
 .buttons > button:nth-child(2) {
