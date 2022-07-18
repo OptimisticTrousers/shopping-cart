@@ -106,6 +106,24 @@ nav {
   display: flex;
 }
 
+.item-stock {
+  display: flex;
+}
+
+.item-stock-status {
+
+  color: #3aae59;
+  font-weight: 700;
+  padding-left: 0.5rem;
+}
+
+.item-stock-price {
+  color: #b7b7b7;
+  font-weight: 500;
+  border-right: 2px solid #f0f0f0;
+  padding-right: 0.5rem;
+}
+
 p.quantity-display {
   border-left: 1px solid #efefef;
   border-right: 1px solid #efefef;
@@ -117,7 +135,7 @@ p.quantity-display {
 }
 
 .quantity > * {
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1.25rem;
   font-size: large;
   width: min-content;
   height: min-content;

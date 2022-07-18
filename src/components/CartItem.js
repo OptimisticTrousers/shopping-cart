@@ -11,6 +11,10 @@ export default function CartItem({image, title, price, quantity}) {
                     <h2 className='item-title'>Title</h2>
                     <p className='item-price'>Price</p>
                 </div>
+                <div className="item-stock">
+                    <p className="item-stock-price">Price</p>
+                    <p className="item-stock-status">In Stock</p>
+                </div>
                 <div className="user-input">
                     <div className="quantity">
                         <button type="button">+</button>
