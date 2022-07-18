@@ -88,7 +88,7 @@ nav {
 }
 
 .cart-container {
-  width: 70%;
+  width: 50%;
   margin: 0 auto;
   padding: 4rem 0rem;
 }
@@ -105,6 +105,9 @@ h1.cart-title{
   padding-bottom: 2rem;
 }
 .card-item-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -115,17 +118,25 @@ h1.cart-title{
   border-bottom: 1px solid #f0f0f0;
   padding: 2rem;
   margin: 0 auto;
+  gap: 1.5rem;
 }
 .item-image {
   background-color: #f0f0f0;
   padding: 0 2rem;
-  padding-top: 6rem;
+  padding-top: 5rem;
   padding-bottom: 3rem;
   border-radius: 20px;
 }
 
 .item-image > img {
   mix-blend-mode: multiply;
+  margin: 0 auto;
+  width: 100px;
+}
+
+.user-input {
+  display: flex;
+  justify-content: space-between;
 }
 
 .item-detail {
