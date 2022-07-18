@@ -89,9 +89,22 @@ nav {
 
 .cart-container {
   width: 85%;
-  background-color: white;
-  border-radius: 20px;
   margin: 0 auto;
+}
+
+.cart {
+
+  background-color: white;
+  padding-top: 2rem;
+  border-radius: 20px;
+}
+
+h1.card-title {
+  text-align: center;
+}
+
+.card-item-details {
+  width: 100%;
 }
 
 .card-item-container {
