@@ -100,7 +100,7 @@ nav {
 }
 
 .quantity {
-  border-radius: 50px;
+  border-radius: 30px;
   border: 4px solid #efefef;
   background-color: white;
   display: flex;
@@ -109,6 +109,11 @@ nav {
 p.quantity-display {
   border-left: 1px solid #efefef;
   border-right: 1px solid #efefef;
+}
+
+.delete {
+  display: flex;
+  align-items: center;
 }
 
 .quantity > * {
@@ -126,13 +131,13 @@ p.quantity-display {
 }
 
 .quantity button:nth-child(1) {
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 .quantity button:nth-child(3) {
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .quantity button:hover {
