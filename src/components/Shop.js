@@ -23,8 +23,8 @@ export default function Shop() {
 
     return (
         <div className="shop">
-            <h1>Get Clothing!</h1>
-            <p>Times are tough. Liven up with our top-notch clothing!</p>
+            <h2 className="shop-title">Get Clothing!</h2>
+            <p className="shop-description">Times are tough. Liven up with our top-notch clothing!</p>
             <div className="products">
                 {renderedProducts}
             </div>

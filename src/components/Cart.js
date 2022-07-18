@@ -8,7 +8,7 @@ export default function Cart() {
     return (
         <div className="cart-container">
             <div className="cart">
-                <h1 className="cart-title">Your Cart</h1>
+                <h2 className="cart-title">Your Cart</h2>
                 <CartItem image={logo}/>
                 <CartItem image={logo}/>
                 <CartItem image={logo}/>
