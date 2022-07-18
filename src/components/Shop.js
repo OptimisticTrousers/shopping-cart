@@ -8,7 +8,10 @@ export default function Shop() {
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
             .then(res => res.json())
-            .then(data => setProducts(data))
+            .then(data => {
+                console.log(data)
+                setProducts(data)
+            })
     }, [])
 
     const renderedProducts = products.map((product) => {
