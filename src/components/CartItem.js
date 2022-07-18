@@ -8,8 +8,8 @@ export default function CartItem({image, title, price, quantity}) {
             </div>
             <div className="card-item-details">
                 <div className="item-detail">
-                    <h2>Title</h2>
-                    <p>Price</p>
+                    <h2 className='item-title'>Title</h2>
+                    <p className='item-price'>Price</p>
                 </div>
                 <div className="user-input">
                     <div className="quantity">
@@ -18,8 +18,8 @@ export default function CartItem({image, title, price, quantity}) {
                         <button type="button">-</button>
                     </div>
                     <div className="delete">
-                        <img src={trash} alt="trash can"/>
-                        <span>Delete</span>
+                        <img className="trash-image" src={trash} alt="trash can"/>
+                        <p className="text">Delete</p>
                     </div>
                 </div>
             </div>

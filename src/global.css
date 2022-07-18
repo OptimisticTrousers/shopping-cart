@@ -101,7 +101,7 @@ nav {
 
 .quantity {
   border-radius: 30px;
-  border: 4px solid #efefef;
+  border: 2px solid #efefef;
   background-color: white;
   display: flex;
 }
@@ -130,6 +130,23 @@ p.quantity-display {
   outline: none;
 }
 
+.item-detail > .item-title {
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+.item-detail > .item-price {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.trash-image {
+  width: 30px;
+}
+
+.delete > .text {
+  font-size: 20px;
+}
 .quantity button:nth-child(1) {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -153,6 +170,7 @@ h1.cart-title{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 2rem 0rem;
   width: 100%;
 }
 
