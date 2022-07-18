@@ -97,6 +97,7 @@ nav {
 
   background-color: white;
   border-radius: 20px;
+  padding: 0rem 1rem;
 }
 
 .quantity {
@@ -193,10 +194,9 @@ h1.cart-title{
 }
 
 .card-item-container {
-  width: 92%;
+  width: 88%;
   display: flex;
   border-top: 1px solid #f0f0f0;
-  border-bottom: 1px solid #f0f0f0;
   padding: 2rem;
   margin: 0 auto;
   gap: 1.5rem;
@@ -220,7 +220,24 @@ h1.cart-title{
   justify-content: space-between;
 }
 
+.cost {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+
 .item-detail {
   display: flex;
   justify-content: space-between;
+}
+
+#root > div > main > div > div.cart > div:nth-child(7){
+  border-top: 3px dashed #f0f0f0;
+}
+
+#root > div > main > div > div.cart > div:nth-child(9){
+  border-bottom: 3px dashed #f0f0f0;
 }
