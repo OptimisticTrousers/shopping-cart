@@ -12,13 +12,13 @@ export default function Navbar() {
                     <h1 className="nav-title">The Optimistic Store</h1>
                     <ul>
                         <li>
-                            <Link to="/shop">
-                                <h2>Home</h2>
+                            <Link to="/">
+                                <h2>HOME</h2>
                             </Link>
                         </li>
                         <li>
                             <Link to="/shop">
-                                <h2>Shop</h2>
+                                <h2>SHOP</h2>
                             </Link>
                         </li>
                     </ul>

@@ -1,4 +1,8 @@
 @font-face {
+  font-family: tangent-bold;
+  src: url(assets/Tangent-Bold.ttf);
+}
+@font-face {
   font-family: bayer-sans;
   src: url(assets/Bayer_Sans.ttf);
 }
@@ -22,6 +26,17 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+ul > li > * {
+
+  font-family: tangent-bold;
+  letter-spacing: 3px;
+  color: black;
+  text-decoration: none;
+}
+ul > li > *:hover {
+  color: #272932;
+
 }
 
 nav {
