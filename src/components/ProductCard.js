@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function ProductCard({image, rating, title, price}) {
     return (
         <div className="product">

@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react"
 import ProductCard from "./ProductCard"
+import { Link } from "react-router-dom"
 
 export default function Shop() {
 
@@ -15,7 +16,9 @@ export default function Shop() {
     }, [])
 
     const renderedProducts = products.map((product) => {
-        return <ProductCard key={product.id} image={product.image} rating={product.rating} title={product.title} price={product.price}/>
+        return <Link to={`${product.id}`}>
+            <ProductCard key={product.id} image={product.image} rating={product.rating} title={product.title} price={product.price}/>
+        </Link>
     })
 
     return (
