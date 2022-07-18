@@ -21,7 +21,8 @@ export default function ProductDetail(props){
             <p>{details.price}</p>
             <p>{details.category}</p>
             <p>{details.description}</p>
-            <img src={details.image} />
+            <img src={details.image} alt={details.description}/>
+            <button type="button">Add to Cart</button>
         </div>
     )
 }

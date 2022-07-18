@@ -10,14 +10,13 @@ export default function Shop() {
         fetch('https://fakestoreapi.com/products')
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 setProducts(data)
             })
     }, [])
 
     const renderedProducts = products.map((product) => {
-        return <Link to={`${product.id}`}>
-            <ProductCard key={product.id} image={product.image} rating={product.rating} title={product.title} price={product.price}/>
+        return <Link key={product.id} to={`${product.id}`}>
+            <ProductCard image={product.image} rating={product.rating} title={product.title} price={product.price}/>
         </Link>
     })
 
