@@ -93,6 +93,7 @@ nav{
   width: 85%;
   margin: 0 auto;
   height: inherit;
+  gap: 1rem;
 }
 
 .product-image {
@@ -360,6 +361,16 @@ img.left-arrow{
   }
 }
 
+@media(max-width: 760px) {
+  .nav-title{
+    display: none;
+  }
+  nav {
+    font-size: 0.75rem;
+  }
+
+}
+
 @media(max-width: 612px) {
 
   .cart-item-container {
@@ -383,4 +394,11 @@ img.left-arrow{
   .buttons > button {
     width: 200px;
   }
+  img.logo-image {
+    display: none;
+  }
+  .links {
+    width: 100%;
+  }
+
 }
