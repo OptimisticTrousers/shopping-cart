@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import leftArrow from '../assets/left-arrow.svg'
 
@@ -22,7 +22,9 @@ export default function ProductDetail(props){
                 <img className="image-detail" src={details.image} alt={details.description}/>
             </div>
             <div className="product-details">
-                <button type="button"><img className="left-arrow" src={leftArrow} alt="left arrow" /> Back To Products</button>
+                <Link to="/shop">
+                    <button type="button"><img className="left-arrow" src={leftArrow} alt="left arrow" /> Back To Products</button>
+                </Link>
                 <h1 className="product-title">{details.title}</h1>
                 <p className="product-price">${details.price}</p>
                 <p className="category-detail">Category: {details.category}</p>

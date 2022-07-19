@@ -109,7 +109,7 @@ nav {
   transform: scale(1.05)
 }
 
-.product-details > button:nth-child(1) {
+.product-details button:nth-child(1) {
   width: 100%;
   padding: 0.5rem 3rem;
   margin-bottom: 2rem;
@@ -512,7 +512,7 @@ h2.cart-title{
   cursor: pointer;
   background-color: #2660A4;
 }
-#root > div > main > div > div.product-details > button:nth-child(1):hover{
+.product-details button:nth-child(1):hover{
   background-color: #efefef;
   cursor: pointer;
 }
@@ -524,7 +524,7 @@ h2.cart-title{
   background-color: #f5f3ff;
 }
 
-.buttons > button:nth-child(2) , .product-details > button:nth-child(1){
+.buttons > button:nth-child(2) , .product-details button:nth-child(1){
 
   border: none;
   background-color: white;
