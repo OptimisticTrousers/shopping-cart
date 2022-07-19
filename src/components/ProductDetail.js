@@ -2,7 +2,7 @@ import { Link, useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import leftArrow from '../assets/left-arrow.svg'
 
-export default function ProductDetail(props){
+export default function ProductDetail(){
 
     const params = useParams()
 
