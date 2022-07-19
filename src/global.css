@@ -1,7 +1,22 @@
 @font-face {
+  font-family: panoptica-sans;
+  src: url(assets/PanopticaSans.ttf);
+}
+
+@font-face {
+  font-family: stem-regular;
+  src: url(assets/Stem-Regular.otf);
+}
+@font-face {
+  font-family: heinemann-bold;
+  src: url(assets/Heinemann-Bold.ttf);
+}
+
+@font-face {
   font-family: tangent-bold;
   src: url(assets/Tangent-Bold.ttf);
 }
+
 @font-face {
   font-family: bayer-sans;
   src: url(assets/Bayer_Sans.ttf);
@@ -43,6 +58,10 @@ ul > li > *:hover {
 
 }
 
+.product-review{
+  font-family: tangent-bold;
+}
+
 nav {
   background-color: red;
 
@@ -50,6 +69,10 @@ nav {
 
 .logo-image {
   border-radius: 40px;
+}
+
+.product-title {
+  font-family: stem-regular;
 }
 
 .logo-image:hover{
@@ -78,7 +101,18 @@ nav {
 
 .product {
   border-radius: 20px;
+  color: black;
   background-color: white;
+}
+
+.price-name {
+  color: #c2c2c2;
+  font-size: 1.25rem;
+  font-family: panoptica-sans;
+}
+
+.product-price {
+  font-family: heinemann-bold;
 }
 
 .product-detail {
