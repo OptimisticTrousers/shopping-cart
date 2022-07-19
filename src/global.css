@@ -71,17 +71,22 @@ nav {
   row-gap: 2rem;
 }
 
+.products > a {
+
+  text-decoration: none;
+}
+
 .product {
   border-radius: 20px;
   background-color: white;
 }
 
-.product > * {
-  text-decoration: none;
+.product-detail {
+  padding: 1rem;
 }
 
-.product-detail  {
-  padding: 1rem;
+.product-rating {
+  padding: 0.5rem;
 }
 
 .product-title {
@@ -370,10 +375,12 @@ h2.cart-title{
   margin-top: 2rem;
 }
 
-button > img, .product-review > *{
+button > img{
   display: inline-block;
   vertical-align: middle;
 }
+
+
 
 img.right-arrow{
   width: 20px;
