@@ -100,6 +100,13 @@ nav {
   color: white;
   border-radius: 8px;
   width: 100%;
+  transition: 200ms linear;
+}
+
+.add-to-cart-button:hover {
+  color: #DEE7E7;
+  cursor: pointer;
+  transform: scale(1.05)
 }
 
 .product-details > button:nth-child(1) {
@@ -166,12 +173,12 @@ nav {
   background-color: white;
 }
 
-.product-image > img {
+.product-image > img, .image-detail-view > img{
 
   transition: 200ms linear;
 }
 
-.product-image > img:hover{
+.product-image > img:hover, .image-detail-view > img:hover{
   transition: all ease-in-out 0.2s;
   transform: scale(1.1);
 }
@@ -477,8 +484,12 @@ h2.cart-title{
   cursor: pointer;
   background-color: #2660A4;
 }
+#root > div > main > div > div.product-details > button:nth-child(1):hover{
+  background-color: #efefef;
+  cursor: pointer;
+}
 
-.buttons > button:nth-child(2):hover , .product-details > button:nth-child(1) {
+.buttons > button:nth-child(2):hover{
 
   transition: all ease-in-out 0.2s;
   cursor: pointer;
