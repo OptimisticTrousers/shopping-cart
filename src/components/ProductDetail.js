@@ -23,7 +23,7 @@ export default function ProductDetail(props){
             </div>
             <div className="product-details">
                 <button type="button"><img className="left-arrow" src={leftArrow} alt="left arrow" /> Back To Products</button>
-                <h1 className="product-price">{details.title}</h1>
+                <h1 className="product-title">{details.title}</h1>
                 <p className="product-price">${details.price}</p>
                 <p className="category-detail">Category: {details.category}</p>
                 <p className="description-detail">{details.description}</p>

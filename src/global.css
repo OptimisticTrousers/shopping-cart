@@ -83,14 +83,52 @@ nav {
   display: flex;
   width: 50%;
   gap: 2rem;
+  height: 100vh;
   margin: 0 auto;
+  padding: 2rem;
+}
+
+.add-to-cart-button {
+  background: linear-gradient(to left, #6879c6, #4c85d2, #5a6cbd);
+  padding: 0.4rem 5rem;
+  font-size: 1.5rem;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.product-details > button:nth-child(1) {
+  width: 100%;
+  padding: 0.5rem 3rem;
+  margin-bottom: 2rem;
+}
+
+.product-details > .product-title {
+  margin-bottom: 1.5rem;
+}
+
+.product-details > .product-price {
+  margin-bottom: 1rem;
+}
+
+.product-details > .category-detail {
+
+  margin-bottom: 0.5rem;
+}
+
+.product-details > .description-detail {
+
+  margin-bottom: 1.25rem;
 }
 
 .image-detail-view {
   background-color: white;
+  height: min-content;
 }
 .product-details {
   line-height: 2rem;
+  width: 100%;
 }
 
 .image-detail {
@@ -416,21 +454,21 @@ h2.cart-title{
   color: white;
 }
 
-.buttons > button:nth-child(1):hover {
+.buttons > button:nth-child(1):hover{
 
   transition: all ease-in-out 0.2s;
   cursor: pointer;
   background-color: #2660A4;
 }
 
-.buttons > button:nth-child(2):hover {
+.buttons > button:nth-child(2):hover , .product-details > button:nth-child(1) {
 
   transition: all ease-in-out 0.2s;
   cursor: pointer;
   background-color: #f5f3ff;
 }
 
-.buttons > button:nth-child(2) {
+.buttons > button:nth-child(2) , .product-details > button:nth-child(1){
 
   border: none;
   background-color: white;
