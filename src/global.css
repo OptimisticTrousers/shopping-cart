@@ -142,15 +142,41 @@ nav {
   line-height: 2rem;
   width: 100%;
 }
+.cart-title {
+  font-family: heinemann-bold;
+}
+.item-stock-price{
+  font-family:Helvetica;
+}
 
 .image-detail {
   width: 446px;
   mix-blend-mode: multiply;
 }
 
+.delete > .text {
+  font-family: tangent-bold;
+}
+
+.cost {
+  font-family: tangent-bold;
+}
+
 .nav-title {
   font-family: bayer-sans;
   letter-spacing: 3px;
+}
+
+.cost {
+  color: #969696;
+}
+
+.cart .subtotal, .cart .amount{
+  color: black;
+}
+
+.cart .total {
+  color: black;
 }
 
 .products {

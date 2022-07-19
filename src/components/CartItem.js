@@ -8,8 +8,8 @@ export default function CartItem({image, title, price, quantity}) {
             </div>
             <div className="cart-item-details">
                 <div className="item-detail">
-                    <h2 className='item-title'>Title</h2>
-                    <p className='item-price'>Price</p>
+                    <h2 className='item-title product-title'>Title</h2>
+                    <p className='item-price product-price'>Price</p>
                 </div>
                 <div className="item-stock">
                     <p className="item-stock-price">Price</p>
