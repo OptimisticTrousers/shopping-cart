@@ -105,6 +105,16 @@ nav {
   background-color: white;
 }
 
+.product-image > img {
+
+  transition: 200ms linear;
+}
+
+.product-image > img:hover{
+  transition: all ease-in-out 0.2s;
+  transform: scale(1.1);
+}
+
 .price-name {
   color: #c2c2c2;
   font-size: 1.25rem;
