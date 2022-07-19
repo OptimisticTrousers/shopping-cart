@@ -136,6 +136,7 @@ nav {
 .image-detail-view {
   background-color: white;
   height: min-content;
+  padding: 3rem;
 }
 .product-details {
   line-height: 2rem;
