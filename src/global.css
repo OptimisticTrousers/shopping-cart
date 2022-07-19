@@ -123,6 +123,7 @@ nav {
 
 .product-price {
   font-family: heinemann-bold;
+  font-size: 1.5rem;
 }
 
 .product-detail {
@@ -144,6 +145,7 @@ nav img {
 
 .price-name {
   padding-bottom: 1rem;
+  font-size: 1.5rem;
 }
 
 .product-review > img.star {
