@@ -72,14 +72,30 @@ nav {
   background-color: white;
 }
 
-h2.product-title {
-  padding-left: 1rem;
-  padding-top: 1rem;
+.product > * {
+  text-decoration: none;
+}
+
+.product-detail  {
+  padding: 1rem;
+}
+
+.product-title {
+  padding-bottom: 1rem;
 }
 
 nav img {
   width: 75px;
   height: 75px;
+}
+
+.price-name {
+  padding-bottom: 1rem;
+}
+
+.product-review > img.star {
+  width: 10%;
+  height: 20px;
 }
 .logo {
   display: flex;
@@ -142,6 +158,9 @@ ul {
   padding: 4rem 0rem;
 }
 
+.product-rating {
+  padding-top: 1rem;
+}
 .cart {
 
   background-color: white;
@@ -347,7 +366,7 @@ h2.cart-title{
   margin-top: 2rem;
 }
 
-button > img{
+button > img, .product-review > *{
   display: inline-block;
   vertical-align: middle;
 }
