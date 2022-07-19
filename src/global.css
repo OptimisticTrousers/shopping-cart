@@ -1,4 +1,8 @@
 @font-face {
+  font-family: andis-regular;
+  src: url(assets/JAM\ Type\ Design\ -\ Andis\ Regular.otf);
+}
+@font-face {
   font-family: panoptica-sans;
   src: url(assets/PanopticaSans.ttf);
 }
@@ -243,6 +247,19 @@ nav{
 
 main {
   background-color: #e8e8e8;
+}
+
+.description-detail {
+  font-family: andis-regular;
+  font-size: x-large;
+}
+
+.category-detail {
+  font-family: stem-regular;
+}
+
+button {
+  font-family: tangent-bold;
 }
 
 nav {
