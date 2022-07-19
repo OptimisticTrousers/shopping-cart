@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
+import leftArrow from '../assets/left-arrow.svg'
 
 export default function ProductDetail(props){
 
@@ -16,13 +17,18 @@ export default function ProductDetail(props){
     console.log(details)
 
     return (
-        <div>
-            <h1>{details.title}</h1>
-            <p>{details.price}</p>
-            <p>{details.category}</p>
-            <p>{details.description}</p>
-            <img src={details.image} alt={details.description}/>
-            <button type="button">Add to Cart</button>
+        <div className="detail-container">
+            <div className="image-detail-view">
+                <img className="image-detail" src={details.image} alt={details.description}/>
+            </div>
+            <div className="product-details">
+                <button type="button"><img className="left-arrow" src={leftArrow} alt="left arrow" /> Back To Products</button>
+                <h1 className="product-price">{details.title}</h1>
+                <p className="product-price">${details.price}</p>
+                <p className="category-detail">Category: {details.category}</p>
+                <p className="description-detail">{details.description}</p>
+                <button className="add-to-cart-button" type="button">Add to Cart</button>
+            </div>
         </div>
     )
 }

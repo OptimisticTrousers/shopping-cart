@@ -79,6 +79,25 @@ nav {
   opacity: 0.7;
 }
 
+.detail-container{
+  display: flex;
+  width: 50%;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.image-detail-view {
+  background-color: white;
+}
+.product-details {
+  line-height: 2rem;
+}
+
+.image-detail {
+  width: 446px;
+  mix-blend-mode: multiply;
+}
+
 .nav-title {
   font-family: bayer-sans;
   letter-spacing: 3px;
