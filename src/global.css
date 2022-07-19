@@ -13,6 +13,10 @@
 html {
   height: 100%;
 }
+
+.shop {
+  padding-bottom: 4rem;
+}
 body {
   min-height: 100%;
   margin: 0;
