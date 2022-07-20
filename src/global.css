@@ -491,7 +491,7 @@ h2.cart-title{
   border-bottom: 3px dashed #f0f0f0;
 }
 
-.buttons > button {
+.buttons button {
   display: block;
   margin: 0 auto;
   margin-top:2rem;
@@ -517,14 +517,18 @@ h2.cart-title{
   cursor: pointer;
 }
 
-.buttons > button:nth-child(2):hover{
+.buttons > a button:hover{
 
   transition: all ease-in-out 0.2s;
   cursor: pointer;
   background-color: #f5f3ff;
 }
 
-.buttons > button:nth-child(2) , .product-details button:nth-child(1){
+.buttons > a {
+  text-decoration: none;
+}
+
+.buttons > a button , .product-details button:nth-child(1){
 
   border: none;
   background-color: white;
