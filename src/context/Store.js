@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react"
 
 const CartQuantityContext = React.createContext()
-const ProductsContext = React.createContext()
+const CartContext = React.createContext()
 
 
 export function useQuantity() {
@@ -11,26 +11,35 @@ export function useQuantity() {
 }
 
 export function useAddToCart() {
-    const {addToCart} = useContext(CartQuantityContext);
+    const {addToCart} = useContext(CartContext);
 
     return addToCart;
+}
+
+export function useCart() {
+    const {cart} = useContext(CartContext)
+
+    return cart
 }
 
 export function CartProvider({children}) {
 
     const [cartQuantity, setCartQuantity] = useState(0)
-    const [products, setProducts] = useState([])
+    const [cart, setCart] = useState([])
 
 
     const addToCart = (details) => {
         setCartQuantity(prevQuantity => prevQuantity + 1)
+        setCart(prevCart => {
+            return [...prevCart, {details}]
+        })
     }
 
     return (
-        <CartQuantityContext.Provider value={{cartQuantity}}>
-            <ProductsContext.Provider value={{products}}>
+        <CartContext.Provider value={{cart, addToCart}}>
+            <CartQuantityContext.Provider value={{cartQuantity}}>
                 {children}
-            </ProductsContext.Provider>
-        </CartQuantityContext.Provider>
+            </CartQuantityContext.Provider>
+        </CartContext.Provider>
     )
 }

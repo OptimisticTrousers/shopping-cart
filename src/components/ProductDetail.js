@@ -30,7 +30,7 @@ export default function ProductDetail(){
                 <p className="product-price">${details.price}</p>
                 <p className="category-detail">Category: {details.category}</p>
                 <p className="description-detail">{details.description}</p>
-                <button onClick={(details) => addToCart(details)} className="add-to-cart-button" type="button">Add to Cart</button>
+                <button onClick={() => addToCart(details)} className="add-to-cart-button" type="button">Add to Cart</button>
             </div>
         </div>
     )
