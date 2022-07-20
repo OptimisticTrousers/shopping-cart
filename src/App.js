@@ -2,7 +2,9 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { useState } from "react";
+import { useState, useContext } from "react";
+
+export const QuantityContext = React.createContext()
 
 export default function App() {
 
@@ -14,9 +16,13 @@ export default function App() {
 
   return (
     <div className="container">
-      <Navbar />
+      <QuantityContext.Provider value={cartQuantity}>
+        <Navbar />
+      </QuantityContext.Provider>
       <main>
-        <Outlet />
+        <QuantityContext.Provider value={handleCartQuantity}>
+          <Outlet />
+        </QuantityContext.Provider>
       </main>
       <Footer />
     </div>

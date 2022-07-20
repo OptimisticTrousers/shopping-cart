@@ -1,8 +1,11 @@
 import { Link, useParams } from "react-router-dom"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import leftArrow from '../assets/left-arrow.svg'
+import { QuantityContext } from "../App"
 
 export default function ProductDetail(){
+
+    const handleCartQuantity = useContext(QuantityContext);
 
     const params = useParams()
 
@@ -29,7 +32,7 @@ export default function ProductDetail(){
                 <p className="product-price">${details.price}</p>
                 <p className="category-detail">Category: {details.category}</p>
                 <p className="description-detail">{details.description}</p>
-                <button className="add-to-cart-button" type="button">Add to Cart</button>
+                <button onClick={handleCartQuantity} className="add-to-cart-button" type="button">Add to Cart</button>
             </div>
         </div>
     )
