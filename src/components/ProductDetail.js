@@ -1,8 +1,11 @@
 import { Link, useParams } from "react-router-dom"
-import { useContext, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import leftArrow from '../assets/left-arrow.svg'
+import { useQuantityHandler } from "../hooks/QualityContext"
 
 export default function ProductDetail(){
+
+    const quantityHandler = useQuantityHandler()
 
     const params = useParams()
 
@@ -13,8 +16,6 @@ export default function ProductDetail(){
             .then(res => res.json())
             .then(data => setDetails(data))
     })
-
-    console.log(details)
 
     return (
         <div className="detail-container">
@@ -29,7 +30,7 @@ export default function ProductDetail(){
                 <p className="product-price">${details.price}</p>
                 <p className="category-detail">Category: {details.category}</p>
                 <p className="description-detail">{details.description}</p>
-                <button className="add-to-cart-button" type="button">Add to Cart</button>
+                <button onClick={quantityHandler} className="add-to-cart-button" type="button">Add to Cart</button>
             </div>
         </div>
     )

@@ -4,10 +4,14 @@ const CartQuantityContext = React.createContext()
 
 export function useQuantity() {
     const {cartQuantity} = useContext(CartQuantityContext)
+
+    return cartQuantity;
 }
 
 export function useQuantityHandler() {
     const {handleCartQuantity} = useContext(CartQuantityContext);
+
+    return handleCartQuantity;
 }
 
 export function CartQuantityProvider({children}) {
