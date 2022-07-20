@@ -4,7 +4,7 @@ import '@testing-library/jest-dom'
 import userEvent from '@testing-library/user-event'
 import Shop from '../components/Shop'
 import ProductDetail from '../components/ProductDetail'
-import {CartQuantityProvider}from '../context/QualityContext'
+import {CartQuantityProvider}from '../context/QuantityContext'
 
 it('the user incrementing the amount of items in the shopping cart', async () => {
 
