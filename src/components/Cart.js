@@ -11,7 +11,7 @@ export default function Cart() {
 
     const renderedCart = cart.map(item => {
         const {details: {id, image, price, title, quantity}} = item
-        return <CartItem key={id} image={image} price={price} title={title} quantity={quantity} />
+        return <CartItem key={id} id={id} image={image} price={price} title={title} quantity={quantity} />
     })
 
     return (
