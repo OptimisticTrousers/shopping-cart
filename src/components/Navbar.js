@@ -1,6 +1,6 @@
 import logo from '../assets/optimistictrousers.jpg'
 import { Link } from 'react-router-dom'
-import { useQuantity } from '../context/QuantityContext'
+import { useQuantity } from '../context/Store'
 
 export default function Navbar() {
 

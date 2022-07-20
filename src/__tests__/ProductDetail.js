@@ -4,7 +4,7 @@ import '@testing-library/jest-dom'
 import userEvent from '@testing-library/user-event'
 import Shop from '../components/Shop'
 import ProductDetail from '../components/ProductDetail'
-import {CartQuantityProvider}from '../context/QuantityContext'
+import {CartProvider}from '../context/Store'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Navbar from '../components/Navbar'
 
@@ -22,10 +22,10 @@ it('the user incrementing the amount of items in the shopping cart', async () =>
 
     render(
         <BrowserRouter>
-            <CartQuantityProvider>
+            <CartProvider>
                 <Navbar />
                 <ProductDetail/>
-            </CartQuantityProvider>
+            </CartProvider>
         </BrowserRouter>
     )
 

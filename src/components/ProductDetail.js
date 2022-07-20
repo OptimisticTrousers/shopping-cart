@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import leftArrow from '../assets/left-arrow.svg'
-import { useQuantityHandler } from "../context/QuantityContext"
+import { useQuantityHandler } from "../context/Store"
 
 export default function ProductDetail(){
 

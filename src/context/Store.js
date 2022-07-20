@@ -14,7 +14,7 @@ export function useQuantityHandler() {
     return handleCartQuantity;
 }
 
-export function CartQuantityProvider({children}) {
+export function CartProvider({children}) {
 
     const [cartQuantity, setCartQuantity] = useState(0)
 
