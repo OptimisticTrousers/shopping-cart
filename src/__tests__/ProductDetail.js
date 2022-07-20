@@ -5,16 +5,34 @@ import userEvent from '@testing-library/user-event'
 import Shop from '../components/Shop'
 import ProductDetail from '../components/ProductDetail'
 import {CartQuantityProvider}from '../context/QuantityContext'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Navbar from '../components/Navbar'
 
 it('the user incrementing the amount of items in the shopping cart', async () => {
 
+    jest.mock('react-router-dom', () => ({
+        ...jest.requireActual('react-router-dom'),
+        useParams: () => ({
+            id: 1
+        }),
+        useRouteMatch: () => ({url: 'shop/1'})
+    }))
+
     const user = userEvent.setup()
 
-    render(<CartQuantityProvider><ProductDetail/></CartQuantityProvider>)
+    render(
+        <BrowserRouter>
+            <CartQuantityProvider>
+                <Navbar />
+                <ProductDetail/>
+            </CartQuantityProvider>
+        </BrowserRouter>
+    )
 
     await user.click(screen.getByRole('button', {name: /Add to Cart/i}))
+    await user.click(screen.getByRole('button', {name: /Add to Cart/i}))
 
-    const counter = screen.getByRole('span', {name: "quantity"})
+    const counter = screen.queryByTestId('quantity')
 
-    expect(counter).toEqual(1)
+    expect(counter.textContent).toEqual("2")
 })
