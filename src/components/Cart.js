@@ -3,18 +3,22 @@ import logo from '../assets/optimistictrousers.jpg'
 import rightArrow from '../assets/right-arrow.svg'
 import leftArrow from '../assets/left-arrow.svg'
 import { Link } from "react-router-dom"
+import { useCart } from "../context/Store"
 
 export default function Cart() {
+
+    const cart = useCart()
+
+    const renderedCart = cart.map(item => {
+        const {details: {id, image, price, title, quantity}} = item
+        return <CartItem key={id} image={image} price={price} title={title} quantity={quantity} />
+    })
 
     return (
         <div className="cart-container">
             <div className="cart">
                 <h2 className="cart-title">Your Cart</h2>
-                <CartItem image={logo}/>
-                <CartItem image={logo}/>
-                <CartItem image={logo}/>
-                <CartItem image={logo}/>
-                <CartItem image={logo}/>
+                {renderedCart}
                 <div className="cost">
                     <p className="subtotal">Subtotal</p>
                     <p className="amount">$400.99</p>

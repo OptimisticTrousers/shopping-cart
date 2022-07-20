@@ -8,17 +8,17 @@ export default function CartItem({image, title, price, quantity}) {
             </div>
             <div className="cart-item-details">
                 <div className="item-detail">
-                    <h2 className='item-title product-title'>Title</h2>
-                    <p className='item-price product-price'>Price</p>
+                    <h2 className='item-title product-title'>{title}</h2>
+                    <p className='item-price product-price'>{price}</p>
                 </div>
                 <div className="item-stock">
-                    <p className="item-stock-price">Price</p>
+                    <p className="item-stock-price">{price}</p>
                     <p className="item-stock-status">In Stock</p>
                 </div>
                 <div className="user-input">
                     <div className="quantity">
                         <button type="button">+</button>
-                        <p className="quantity-display">0</p>
+                        <p className="quantity-display">{quantity}</p>
                         <button type="button">-</button>
                     </div>
                     <div className="delete">
