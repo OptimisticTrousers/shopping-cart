@@ -1,17 +1,13 @@
 import React from 'react'
 import {render, screen} from '@testing-library/react'
 import '@testing-library/jest-dom'
-import userEvent from '@testing-library/user-event'
 import Shop from '../components/Shop';
+import { BrowserRouter } from 'react-router-dom';
 
 describe('Shop', () => {
 
-    const unmockedFetch = window.fetch
-
-    beforeAll(() => {
-        window.fetch = jest.fn(() => {
-            return Promise.resolve({json: () => {
-                return Promise.resolve([{
+    beforeEach(() => {
+        fetch.mockResponseOnce(JSON.stringify([{
                     id: 1,
                     title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
                     price: 109.95,
@@ -46,13 +42,7 @@ describe('Shop', () => {
                     rate: 4.7,
                     count: 500
                     }
-                },])
-            }})
-        })
-    })
-
-    afterAll(() => {
-        window.fetch = unmockedFetch
+                }]))
     })
 
     it("renders empty shop", () => {
@@ -61,13 +51,20 @@ describe('Shop', () => {
 
         expect(asFragment()).toMatchSnapshot()
     })
+
     it("renders a list of 3 products", async () => {
 
-        render(<Shop />)
+
+            render(
+                <BrowserRouter>
+                    <Shop />
+                </BrowserRouter>
+            )
 
         const allProducts = await screen.findAllByTestId('product-card')
 
         expect(allProducts).toHaveLength(3)
+        expect(fetch).toHaveBeenCalledTimes(1)
     })
 
 })
