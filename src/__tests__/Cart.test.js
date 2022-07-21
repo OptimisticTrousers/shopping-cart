@@ -52,17 +52,18 @@ describe("CartItem", () => {
 
         const firstProduct = await screen.findByAltText('Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops')
 
-        expect(firstProduct).toBeInTheDocument()
-
-        expect(asFragment()).toMatchSnapshot()
+        await user.click(firstProduct)
 
 
         await user.click(screen.getByRole('button', {name: /Add to Cart/i}))
-        await user.click(screen.getByRole('button', {name: /Add to Cart/i}))
 
-        const counter = screen.queryByTestId('quantity')
+        const cartSVG = screen.getByTestId('cart-svg')
 
-        expect(counter.textContent).toEqual("2")
+        await user.click(cartSVG)
+
+        const title = await screen.findByText(/Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops/i)
+
+        expect(title).toEqual("2")
         //expect(asFragment).toMatchSnapshot()
 
         //await waitForElementToBeRemoved(() => screen.queryByAltText('Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops').toBe('Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops'))
