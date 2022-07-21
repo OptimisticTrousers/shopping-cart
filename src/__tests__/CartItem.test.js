@@ -37,24 +37,27 @@ describe('CartItem', () => {
 
         const user = userEvent.setup()
 
+        // Adding first product to cart
         await user.click(screen.queryByText("SHOP"))
-
         const firstProduct = await screen.findByAltText('Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops')
-
         await user.click(firstProduct)
-
         await user.click(screen.getByRole('button', {name: /Add to Cart/i}))
 
-        const cartSVG = screen.getByTestId('cart-svg')
+        // Adding second product to cart
+        await user.click(screen.queryByText("SHOP"))
+        const secondProduct = await screen.findByAltText('Mens Casual Premium Slim Fit T-Shirts')
+        await user.click(secondProduct)
+        await user.click(screen.getByRole('button', {name: /Add to Cart/i}))
 
+        // Going to checkout
+        const cartSVG = screen.getByTestId('cart-svg')
         await user.click(cartSVG)
 
-        const cartItemTitle = await screen.findByRole('button', {name: "+"})
+        //Clicking quantity incrementor for first product only
+        const [firstItemTitle] = await screen.findAllByRole('button', {name: "+"})
+        await user.click(firstItemTitle)
+        const [firstItemQuantity] = await screen.findAllByTestId('product-quantity')
 
-        await user.click(cartItemTitle)
-
-        const productQuantity = await screen.findByTestId('product-quantity')
-
-        expect(productQuantity.textContent).toBe("1")
+        expect(firstItemQuantity.textContent).toBe("1")
     })
 })
