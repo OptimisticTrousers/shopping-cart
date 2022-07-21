@@ -1,5 +1,5 @@
 import React from 'react'
-import {cleanup, getByAltText, getByTestId, render, screen, waitFor, waitForDomChange, waitForElementToBeRemoved} from '@testing-library/react'
+import {cleanup, render, screen, waitFor, waitForDomChange, waitForElementToBeRemoved} from '@testing-library/react'
 import '@testing-library/jest-dom'
 import userEvent from '@testing-library/user-event'
 import Cart from '../components/Cart'
@@ -43,12 +43,6 @@ describe("CartItem", () => {
 
 
         await user.click(screen.queryByText("SHOP"))
-        
-
-        //await waitFor(() => {
-            //expect(screen.getByAltText('Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops')).toBeInTheDocument()
-
-        //})
 
         const firstProduct = await screen.findByAltText('Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops')
 
@@ -61,9 +55,11 @@ describe("CartItem", () => {
 
         await user.click(cartSVG)
 
-        const title = await screen.findByText(/Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops/i)
 
-        expect(title).toEqual("2")
+        await waitFor(() => {
+            expect(screen.getByText('In Stock')).toBeInTheDocument()
+        })
+
         //expect(asFragment).toMatchSnapshot()
 
         //await waitForElementToBeRemoved(() => screen.queryByAltText('Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops').toBe('Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops'))
