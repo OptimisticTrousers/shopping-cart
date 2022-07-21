@@ -16,7 +16,7 @@ export default function Shop() {
 
     const renderedProducts = products.map((product) => {
         return <Link key={product.id} to={`${product.id}`}>
-            <ProductCard image={product.image} rating={product.rating} title={product.title} price={product.price}/>
+            <ProductCard  image={product.image} rating={product.rating} title={product.title} price={product.price}/>
         </Link>
     })
 
@@ -26,6 +26,9 @@ export default function Shop() {
             <p className="shop-description">Times are tough. Liven up with our top-notch clothing!</p>
             <div className="products">
                 {renderedProducts}
+            </div>
+            <div>
+                {JSON.stringify(products)}
             </div>
         </div>
     )
