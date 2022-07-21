@@ -56,8 +56,9 @@ describe('CartItem', () => {
         //Clicking quantity incrementor for first product only
         const [firstItemTitle] = await screen.findAllByRole('button', {name: "+"})
         await user.click(firstItemTitle)
-        const [firstItemQuantity] = await screen.findAllByTestId('product-quantity')
+        const firstItemQuantity = await screen.findAllByTestId('product-quantity')
 
-        expect(firstItemQuantity.textContent).toBe("1")
+
+        expect(firstItemQuantity).toBe("2")
     })
 })
