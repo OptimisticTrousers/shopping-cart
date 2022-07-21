@@ -34,9 +34,7 @@ export function CartProvider({children}) {
 
             const productIndex = prevCart.findIndex((product) => product.id === details.id)
 
-            console.log(productIndex)
-
-            if(productIndex){
+            if(productIndex !== -1){
                 const newCart = [...prevCart]
 
                 newCart.splice(productIndex, 1, {...details, quantity: details.quantity + 1})

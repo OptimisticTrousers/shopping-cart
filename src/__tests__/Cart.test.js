@@ -1,5 +1,5 @@
 import React from 'react'
-import {cleanup, render, screen, waitFor, waitForDomChange, waitForElementToBeRemoved} from '@testing-library/react'
+import {cleanup, fireEvent, render, screen, waitFor, waitForDomChange, waitForElementToBeRemoved} from '@testing-library/react'
 import '@testing-library/jest-dom'
 import userEvent from '@testing-library/user-event'
 import Cart from '../components/Cart'
@@ -21,12 +21,31 @@ describe("CartItem", () => {
                 id: 1
             }),
         }))
+
+        //window.fetch = jest.fn(() => {
+            //return Promise.resolve({json: () => {
+                //return Promise.resolve([{
+                    //title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+                    //image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+                    //category: "men's clothing", 
+                    //description: "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+                    //id: 1,
+                    //price: 109.95,
+                    //quantity: 1,
+                    //rating: {
+                        //rate: 3.9,
+                        //count: 120
+                    //}
+                //}])
+            //}})
+        //})
     })
 
     it('adding a product to cart', async () => {
 
 
         const {asFragment} = render(
+        <React.StrictMode>
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<App />} >
@@ -37,6 +56,7 @@ describe("CartItem", () => {
                     </Route>
                 </Routes>
             </BrowserRouter>
+        </React.StrictMode>
         )
 
         const user = userEvent.setup()
@@ -55,10 +75,13 @@ describe("CartItem", () => {
 
         await user.click(cartSVG)
 
+        const cartItemTitle = await screen.findByTestId('title-undefined')
 
-        await waitFor(() => {
-            expect(screen.getByText('In Stock')).toBeInTheDocument()
-        })
+        expect(cartItemTitle).toBeInTheDocument()
+
+        //expect(asFragment()).toMatchSnapshot()
+
+        //expect(cartItemTitle).toBeInTheDocument()
 
         //expect(asFragment).toMatchSnapshot()
 

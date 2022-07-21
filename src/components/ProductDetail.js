@@ -15,6 +15,7 @@ export default function ProductDetail(){
         fetch(`https://fakestoreapi.com/products/${params.id}`)
             .then(res => res.json())
             .then(data => setDetails(data))
+            console.log(details)
     }, [])
 
     return (
