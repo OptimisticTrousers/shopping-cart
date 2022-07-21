@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductCard snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="product"
+    data-testid="product-card"
+  >
+    <div
+      class="product-image"
+    >
+      <img
+        alt="Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"
+        src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+      />
+    </div>
+    <div
+      class="product-rating"
+    >
+      <p
+        class="product-review"
+        data-testid="product-rating"
+      >
+        <img
+          alt="yellow-star"
+          class="star"
+          src="star.svg"
+        />
+         3.9 (120 Reviews)
+      </p>
+    </div>
+    <div
+      class="product-detail"
+    >
+      <h2
+        class="product-title"
+      >
+        Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops
+      </h2>
+      <p
+        class="price-name"
+      >
+        Price:
+      </p>
+      <p
+        class="product-price"
+      >
+        $109.95
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
