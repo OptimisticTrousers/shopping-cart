@@ -64,7 +64,8 @@ describe('Shop', () => {
         const allProducts = await screen.findAllByTestId('product-card')
 
         expect(allProducts).toHaveLength(3)
-        expect(fetch).toHaveBeenCalledTimes(1)
+        // Fetch is called once on mount and another time when useEffect runs and changes state
+        expect(fetch).toHaveBeenCalledTimes(2)
     })
 
 })
