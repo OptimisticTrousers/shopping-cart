@@ -17,6 +17,17 @@ describe("ProductDetail", () => {
             }),
         }))
     })
+    it("snapshot", () => {
+        const {asFragment} = render(
+            <BrowserRouter>
+                <Store.CartProvider >
+                    <ProductDetail />
+                </Store.CartProvider>
+            </BrowserRouter>
+        )
+
+        expect(asFragment()).toMatchSnapshot()
+    })
     it("expecting to call the 'Add to Cart' function in the cart context", async () => {
 
         const mockAddToCart = jest.fn()

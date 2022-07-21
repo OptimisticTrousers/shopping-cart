@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductDetail snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="detail-container"
+  >
+    <div
+      class="image-detail-view"
+    >
+      <img
+        class="image-detail"
+      />
+    </div>
+    <div
+      class="product-details"
+    >
+      <a
+        href="/shop"
+      >
+        <button
+          type="button"
+        >
+          <img
+            alt="left arrow"
+            class="left-arrow"
+            src="left-arrow.svg"
+          />
+           Back To Products
+        </button>
+      </a>
+      <h1
+        class="product-title"
+      />
+      <p
+        class="product-price"
+      >
+        $
+      </p>
+      <p
+        class="category-detail"
+      >
+        Category: 
+      </p>
+      <p
+        class="description-detail"
+      />
+      <button
+        class="add-to-cart-button"
+        type="button"
+      >
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
