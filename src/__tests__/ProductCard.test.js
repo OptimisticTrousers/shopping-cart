@@ -24,17 +24,19 @@ describe("ProductCard", () => {
     })
     it("ProductCard renders correctly when given props", () => {
 
-        render(<ProductCard image={product.image} rating={product.rating} title={product.title} price={product.price} />)
+        const {image, rating, title, price} = product
 
-        const productTitle = screen.queryByText(product.title)
-        const productImage = screen.queryByAltText(product.title)
+        render(<ProductCard image={image} rating={rating} title={title} price={price} />)
+
+        const productTitle = screen.queryByText(title)
+        // Querying an image which has the same alt text as the title
+        const productImage = screen.queryByAltText(title)
         const productRating = screen.queryByTestId('product-rating')
         const productPrice = screen.getByText(/\$/i)
 
-        expect(productTitle.textContent).toBe(product.title)
-        expect(productImage.src).toBe(product.image)
-        expect(productRating.textContent).toBe(` ${product.rating.rate} (${product.rating.count} Reviews)`)
-        expect(productPrice.textContent).toBe(`$${product.price}`)
-
+        expect(productTitle.textContent).toBe(title)
+        expect(productImage.src).toBe(image)
+        expect(productRating.textContent).toBe(` ${rating.rate} (${rating.count} Reviews)`)
+        expect(productPrice.textContent).toBe(`$${price}`)
     })
 })

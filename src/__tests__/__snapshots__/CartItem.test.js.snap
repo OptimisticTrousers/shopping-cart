@@ -18,11 +18,9 @@ exports[`CartItem screenshot 1`] = `
       >
         <h2
           class="item-title product-title"
-          data-testid="title-undefined"
         />
         <p
           class="item-price product-price"
-          data-testid="price"
         >
           $
         </p>

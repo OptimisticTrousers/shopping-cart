@@ -10,8 +10,8 @@ export default function CartItem(props) {
             </div>
             <div className="cart-item-details">
                 <div className="item-detail">
-                    <h2 className='item-title product-title' data-testid={`title-${id}`}>{title}</h2>
-                    <p className='item-price product-price' data-testid="price">${price}</p>
+                    <h2 className='item-title product-title'>{title}</h2>
+                    <p className='item-price product-price'>${price}</p>
                 </div>
                 <div className="item-stock">
                     <p className="item-stock-price">${price}</p>
