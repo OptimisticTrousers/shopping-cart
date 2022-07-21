@@ -31,7 +31,19 @@ export function CartProvider({children}) {
     const addToCart = (details) => {
         setCartQuantity(prevQuantity => prevQuantity + 1)
         setCart(prevCart => {
-            return [...prevCart, {details}]
+
+            const productIndex = prevCart.findIndex((product) => product.id === details.id)
+
+            console.log(productIndex)
+
+            if(productIndex){
+                const newCart = [...prevCart]
+
+                newCart.splice(productIndex, 1, {...details, quantity: details.quantity + 1})
+
+                return newCart;
+            }
+            return [...prevCart, {...details, quantity: 0}];
         })
     }
 

@@ -10,7 +10,8 @@ export default function Cart() {
     const cart = useCart()
 
     const renderedCart = cart.map(item => {
-        const {details: {id, image, price, title, quantity}} = item
+        console.log(item)
+        const {id, image, price, title, quantity} = item
         return <CartItem key={id} id={id} image={image} price={price} title={title} quantity={quantity} />
     })
 

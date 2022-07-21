@@ -15,12 +15,12 @@ export default function ProductDetail(){
         fetch(`https://fakestoreapi.com/products/${params.id}`)
             .then(res => res.json())
             .then(data => setDetails(data))
-    })
+    }, [])
 
     return (
         <div className="detail-container">
             <div className="image-detail-view">
-                <img className="image-detail" src={details.image} alt={details.description}/>
+                <img className="image-detail" src={details.image} alt={details.title}/>
             </div>
             <div className="product-details">
                 <Link to="/shop">
@@ -30,7 +30,7 @@ export default function ProductDetail(){
                 <p className="product-price">${details.price}</p>
                 <p className="category-detail">Category: {details.category}</p>
                 <p className="description-detail">{details.description}</p>
-                <button onClick={() => addToCart(details)} className="add-to-cart-button" type="button">Add to Cart</button>
+                <button onClick={() => addToCart({...details, quantity: 0})} className="add-to-cart-button" type="button">Add to Cart</button>
             </div>
         </div>
     )

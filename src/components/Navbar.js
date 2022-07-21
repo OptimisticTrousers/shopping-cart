@@ -22,7 +22,7 @@ export default function Navbar() {
                         </li>
                         <li>
                             <Link to="/shop">
-                                <h2>SHOP</h2>
+                                <h2 >SHOP</h2>
                             </Link>
                         </li>
                     </ul>

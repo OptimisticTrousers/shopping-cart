@@ -8,17 +8,17 @@ export default function CartItem({image, title, price, quantity, id}) {
             </div>
             <div className="cart-item-details">
                 <div className="item-detail">
-                    <h2 className='item-title product-title' data-testid="title">{title}</h2>
-                    <p className='item-price product-price' data-testid="price">{price}</p>
+                    <h2 className='item-title product-title' data-testid={`title-${id}`}>{title}</h2>
+                    <p className='item-price product-price' data-testid="price">${price}</p>
                 </div>
                 <div className="item-stock">
-                    <p className="item-stock-price">{price}</p>
+                    <p className="item-stock-price">${price}</p>
                     <p className="item-stock-status">In Stock</p>
                 </div>
                 <div className="user-input">
                     <div className="quantity">
                         <button type="button">+</button>
-                        <p className="quantity-display" data-testid={`quantity-${id}`}>{quantity}</p>
+                        <p className="quantity-display" data-testid="quantity">{quantity}</p>
                         <button type="button">-</button>
                     </div>
                     <div className="delete">
