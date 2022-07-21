@@ -22,8 +22,6 @@ describe("ProductDetail", () => {
         const mockAddToCart = jest.fn()
         jest.spyOn(Store, 'useAddToCart').mockReturnValue(mockAddToCart)
 
-
-
         render(
             <BrowserRouter>
                 <Store.CartProvider >
