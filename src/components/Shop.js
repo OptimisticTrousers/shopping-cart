@@ -27,9 +27,6 @@ export default function Shop() {
             <div className="products">
                 {renderedProducts}
             </div>
-            <div>
-                {JSON.stringify(products)}
-            </div>
         </div>
     )
 }
