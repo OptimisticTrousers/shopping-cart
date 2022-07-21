@@ -22,36 +22,27 @@ export function useCart() {
     return cart
 }
 
-export function useIncrementQuantityInCart(details) {
-
-    const {setCartQuantity} = useContext(CartContext);
-
-    setCartQuantity(prevQuantity => prevQuantity + 1)
-}
-
 export function CartProvider({children}) {
 
     const [cartQuantity, setCartQuantity] = useState(0)
     const [cart, setCart] = useState([])
 
 
-    const increaseProductQuantity = (details, prevCart) => {
-
-        const productIndex = prevCart.findIndex((product) => product.id === details.id)
-
-        if(productIndex !== -1){
-            const newCart = [...prevCart]
-
-            newCart.splice(productIndex, 1, {...details, quantity: prevCart[productIndex].quantity + 1})
-
-            return newCart;
-        }
-        return [...prevCart, {...details, quantity: 1}];
-    }
-
     const addToCart = (details) => {
         setCartQuantity(prevQuantity => prevQuantity + 1)
-        setCart(prevCart => increaseProductQuantity(details, prevCart))
+        setCart(prevCart => {
+
+            const productIndex = prevCart.findIndex((product) => product.id === details.id)
+
+            if(productIndex !== -1){
+                const newCart = [...prevCart]
+
+                newCart.splice(productIndex, 1, {...details, quantity: prevCart[productIndex].quantity + 1})
+
+                return newCart;
+            }
+            return [...prevCart, {...details, quantity: 0}];
+        })
     }
 
     return (

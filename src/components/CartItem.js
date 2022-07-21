@@ -1,6 +1,8 @@
 import trash from '../assets/trash.svg'
+export default function CartItem(props) {
 
-export default function CartItem({image, title, price, quantity, id}) {
+    const {image, title, price, quantity, id} = props
+
     return (
         <div className="cart-item-container">
             <div className="item-image">
@@ -17,7 +19,7 @@ export default function CartItem({image, title, price, quantity, id}) {
                 </div>
                 <div className="user-input">
                     <div className="quantity">
-                        <button type="button">+</button>
+                        <button type="button" >+</button>
                         <p className="quantity-display" data-testid="quantity">{quantity}</p>
                         <button type="button">-</button>
                     </div>
