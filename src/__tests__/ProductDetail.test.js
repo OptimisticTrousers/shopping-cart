@@ -40,7 +40,6 @@ describe("ProductDetail", () => {
         )
 
         const addToCartButton = await screen.findByRole('button', {name: /Add to Cart/i})
-
         const user = userEvent.setup()
 
         await user.click(addToCartButton)
@@ -53,6 +52,4 @@ describe("ProductDetail", () => {
 
         expect(mockAddToCart).toHaveBeenCalledTimes(7)
     })
-    
-
 })
