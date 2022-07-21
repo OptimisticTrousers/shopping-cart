@@ -37,11 +37,11 @@ export function CartProvider({children}) {
             if(productIndex !== -1){
                 const newCart = [...prevCart]
 
-                newCart.splice(productIndex, 1, {...details, quantity: details.quantity + 1})
+                newCart.splice(productIndex, 1, {...details, quantity: prevCart[productIndex].quantity + 1})
 
                 return newCart;
             }
-            return [...prevCart, {...details, quantity: 0}];
+            return [...prevCart, {...details, quantity: 1}];
         })
     }
 
