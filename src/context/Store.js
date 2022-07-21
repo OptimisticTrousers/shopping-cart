@@ -41,7 +41,7 @@ export function CartProvider({children}) {
 
                 return newCart;
             }
-            return [...prevCart, {...details, quantity: 0}];
+            return [...prevCart, {...details, quantity: 1}];
         })
     }
 

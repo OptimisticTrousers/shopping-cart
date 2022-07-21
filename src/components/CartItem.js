@@ -20,7 +20,7 @@ export default function CartItem(props) {
                 <div className="user-input">
                     <div className="quantity">
                         <button type="button" >+</button>
-                        <p className="quantity-display" data-testid="quantity">{quantity}</p>
+                        <p className="quantity-display" data-testid="product-quantity">{quantity}</p>
                         <button type="button">-</button>
                     </div>
                     <div className="delete">

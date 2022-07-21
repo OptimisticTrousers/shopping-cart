@@ -15,7 +15,6 @@ export default function ProductDetail(){
         fetch(`https://fakestoreapi.com/products/${params.id}`)
             .then(res => res.json())
             .then(data => setDetails(data))
-            console.log(details)
     }, [])
 
     return (
@@ -31,7 +30,7 @@ export default function ProductDetail(){
                 <p className="product-price">${details.price}</p>
                 <p className="category-detail">Category: {details.category}</p>
                 <p className="description-detail">{details.description}</p>
-                <button onClick={() => addToCart({...details, quantity: 0})} className="add-to-cart-button" type="button">Add to Cart</button>
+                <button onClick={() => addToCart(details)} className="add-to-cart-button" type="button">Add to Cart</button>
             </div>
         </div>
     )
