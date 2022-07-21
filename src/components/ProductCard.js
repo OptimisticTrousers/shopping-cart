@@ -3,7 +3,7 @@ import star from '../assets/star.svg'
 
 export default function ProductCard({image, rating, title, price}) {
     return (
-        <div className="product">
+        <div className="product" data-testid="product-card">
             <div className="product-image">
                 <img src={image} alt={title}/>
             </div>

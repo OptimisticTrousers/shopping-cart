@@ -47,6 +47,7 @@ describe("ProductDetail", () => {
 
         expect(asFragment()).toMatchSnapshot()
     })
+
     each([
         7,
         1,
