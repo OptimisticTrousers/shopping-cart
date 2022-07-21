@@ -4,6 +4,7 @@ import userEvent from '@testing-library/user-event'
 import ProductDetail from '../components/ProductDetail'
 import * as Store from '../context/Store'
 import {BrowserRouter} from 'react-router-dom'
+import each from 'jest-each'
 
 describe("ProductDetail", () => {
 
@@ -26,7 +27,14 @@ describe("ProductDetail", () => {
 
         expect(asFragment()).toMatchSnapshot()
     })
-    it("expecting to call the 'Add to Cart' function in the cart context", async () => {
+    each([
+        7,
+        1,
+        2,
+        10,
+        5,
+        3 
+    ]).it("expecting to call the 'Add to Cart' function in the cart context", async (userClicks) => {
 
         const mockAddToCart = jest.fn()
         jest.spyOn(Store, 'useAddToCart').mockReturnValue(mockAddToCart)
@@ -42,14 +50,10 @@ describe("ProductDetail", () => {
         const addToCartButton = await screen.findByRole('button', {name: /Add to Cart/i})
         const user = userEvent.setup()
 
-        await user.click(addToCartButton)
-        await user.click(addToCartButton)
-        await user.click(addToCartButton)
-        await user.click(addToCartButton)
-        await user.click(addToCartButton)
-        await user.click(addToCartButton)
-        await user.click(addToCartButton)
+        for(let i = 0; i < userClicks; i++){
+            await user.click(addToCartButton)
+        }
 
-        expect(mockAddToCart).toHaveBeenCalledTimes(7)
+        expect(mockAddToCart).toHaveBeenCalledTimes(userClicks)
     })
 })
