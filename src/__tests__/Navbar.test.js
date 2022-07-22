@@ -2,15 +2,12 @@ import React from 'react'
 import {render, screen} from '@testing-library/react'
 import '@testing-library/jest-dom'
 import userEvent from '@testing-library/user-event'
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {BrowserRouter} from 'react-router-dom'
 import * as Store from '../context/Store'
 import Navbar from '../components/Navbar'
 import ProductDetail from '../components/ProductDetail'
 import each from 'jest-each'
-import CartItem from '../components/CartItem'
 import Cart from '../components/Cart'
-import App from '../App'
-import Shop from '../components/Shop'
 
 describe("Navbar", () => {
     beforeAll(() => {
