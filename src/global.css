@@ -221,6 +221,7 @@ nav {
   border-radius: 20px;
   color: black;
   background-color: white;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,.1),0 10px 10px -5px rgba(0,0,0,.04);
 }
 
 .product-image > img, .image-detail-view > img{
@@ -538,6 +539,23 @@ h2.cart-title{
 .product-details button:nth-child(1):hover{
   background-color: #efefef;
   cursor: pointer;
+}
+
+nav a{
+  all: unset;
+}
+
+nav a:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+nav span {
+  font-family: heinemann-bold;
+  padding: 0.25rem;
+  margin-right: 0.25rem;
+  background-color: #b7b7b7;
+  border-radius: 1000px;
 }
 
 .buttons > a button:hover{

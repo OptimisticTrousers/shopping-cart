@@ -10,7 +10,7 @@ export default function Navbar() {
         <nav >            
             <div className="links">
                 <div className="logo">
-                    <Link to="/shop">
+                    <Link to="/">
                         <img className="logo-image" src={logo} alt="smiling pair of pants"/>
                     </Link>
                     <h1 className="nav-title">The Optimistic Store</h1>
