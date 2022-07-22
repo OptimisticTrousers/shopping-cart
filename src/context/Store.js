@@ -22,6 +22,12 @@ export function useCart() {
     return cart
 }
 
+export function useRemoveFromCart() {
+    const {removeFromCart} = useContext(CartContext)
+
+    return removeFromCart
+}
+
 export function CartProvider({children}) {
 
     const [cartQuantity, setCartQuantity] = useState(0)
@@ -45,8 +51,32 @@ export function CartProvider({children}) {
         })
     }
 
+    const removeFromCart = (details) => {
+        setCartQuantity(prevQuantity => {
+            if(prevQuantity === 1){
+                return prevQuantity
+            }
+
+            return prevQuantity - 1
+        })
+        setCart(prevCart => {
+
+            const productIndex = prevCart.findIndex((product) => product.id === details.id)
+
+            if(prevCart[productIndex].quantity === 1){
+                return prevCart
+            }
+
+            const newCart = [...prevCart]
+
+            newCart.splice(productIndex, 1, {...details, quantity: prevCart[productIndex].quantity - 1})
+
+            return newCart
+        })
+    }
+
     return (
-        <CartContext.Provider value={{cart, addToCart}}>
+        <CartContext.Provider value={{cart, addToCart, removeFromCart}}>
             <CartQuantityContext.Provider value={{cartQuantity}}>
                 {children}
             </CartQuantityContext.Provider>
