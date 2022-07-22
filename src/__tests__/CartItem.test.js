@@ -71,7 +71,7 @@ describe('CartItem', () => {
         5,
         10,
         7
-    ]).it('correctly increments total cart quantity', async (userClicks) => {
+    ]).it('correctly calls addToCart a certain amount of times', async (userClicks) => {
 
         const mockAddToCart = jest.fn()
         jest.spyOn(Store, 'useAddToCart').mockReturnValue(mockAddToCart)
@@ -79,7 +79,6 @@ describe('CartItem', () => {
         render(
             <BrowserRouter>
                 <Store.CartProvider>
-                    <Navbar /> 
                     <CartItem title={title} price={price} image={image} rating={rating} quantity={quantity} id={id}/>
                 </Store.CartProvider>
             </BrowserRouter>
@@ -109,7 +108,7 @@ describe('CartItem', () => {
         5,
         10,
         7
-    ]).it('correctly decrements total cart quantity', async (initialQuantity) => {
+    ]).it('correctly calls removeFromCart a certain number of times', async (initialQuantity) => {
 
         const mockRemoveFromCart = jest.fn()
         jest.spyOn(Store, 'useRemoveFromCart').mockReturnValue(mockRemoveFromCart)
@@ -117,7 +116,6 @@ describe('CartItem', () => {
         render(
             <BrowserRouter>
                 <Store.CartProvider>
-                    <Navbar /> 
                     <CartItem title={title} price={price} image={image} rating={rating} quantity={initialQuantity} id={id}/>
                 </Store.CartProvider>
             </BrowserRouter>
@@ -137,7 +135,67 @@ describe('CartItem', () => {
         //const navQuantity = screen.queryByTestId('quantity')
         //expect(navQuantity.textContent).toBe("1")
         //const productQuantity = screen.queryByTestId('product-quantity')
-        //expect(productQuantity.textContent).toBe(userClicks.toString())
+        //expect(productQuantity.textContent).toBe(initialQuantity.toString())
+    })
+
+    each([
+        2, 
+        3,
+        1,
+        5,
+        10,
+        7
+    ]).it('correctly increments cartItem product quantity', async (userClicks) => {
+
+        render(
+            <BrowserRouter>
+                <Store.CartProvider>
+                    <CartItem title={title} price={price} image={image} rating={rating} quantity={quantity} id={id}/>
+                </Store.CartProvider>
+            </BrowserRouter>
+        )
+
+        const user = userEvent.setup()
+
+        const incrementProductQuantityButton = screen.getByRole('button', {name: "+"})
+
+        for(let i = 0; i < userClicks; i++){
+
+            await user.click(incrementProductQuantityButton)
+        }
+
+        const productQuantity = screen.queryByTestId('product-quantity')
+        expect(productQuantity.textContent).toBe(userClicks.toString())
+    })
+
+        each([
+        2, 
+        3,
+        1,
+        5,
+        10,
+        7
+    ]).it('correctly decrements cartItem product quantity', async (initialQuantity) => {
+
+        render(
+            <BrowserRouter>
+                <Store.CartProvider>
+                    <CartItem title={title} price={price} image={image} rating={rating} quantity={initialQuantity} id={id}/>
+                </Store.CartProvider>
+            </BrowserRouter>
+        )
+
+        const user = userEvent.setup()
+
+        const decrementProductQuantityButton = screen.getByRole('button', {name: "-"})
+
+        for(let i = 0; i < initialQuantity; i++){
+
+            await user.click(decrementProductQuantityButton)
+        }
+
+        const productQuantity = screen.queryByTestId('product-quantity')
+        expect(productQuantity.textContent).toBe("1")
     })
 
 })
