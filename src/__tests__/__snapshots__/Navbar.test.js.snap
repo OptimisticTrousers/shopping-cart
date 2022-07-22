@@ -23,6 +23,26 @@ exports[`Navbar snapshot 1`] = `
         >
           The Optimistic Store
         </h1>
+        <ul>
+          <li>
+            <a
+              href="/"
+            >
+              <h2>
+                HOME
+              </h2>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/shop"
+            >
+              <h2>
+                SHOP
+              </h2>
+            </a>
+          </li>
+        </ul>
       </div>
       <a
         href="/cart"
