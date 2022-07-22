@@ -108,10 +108,10 @@ describe('CartItem', () => {
         5,
         10,
         7
-    ]).it('correctly calls removeFromCart a certain number of times', async (initialQuantity) => {
+    ]).it('correctly calls reduceQuantity a certain number of times', async (initialQuantity) => {
 
-        const mockRemoveFromCart = jest.fn()
-        jest.spyOn(Store, 'useRemoveFromCart').mockReturnValue(mockRemoveFromCart)
+        const mockReduceQuantity = jest.fn()
+        jest.spyOn(Store, 'useReduceQuantity').mockReturnValue(mockReduceQuantity)
 
         render(
             <BrowserRouter>
@@ -130,12 +130,7 @@ describe('CartItem', () => {
             await user.click(decrementProductQuantityButton)
         }
 
-        expect(mockRemoveFromCart).toHaveBeenCalledTimes(initialQuantity)
-
-        //const navQuantity = screen.queryByTestId('quantity')
-        //expect(navQuantity.textContent).toBe("1")
-        //const productQuantity = screen.queryByTestId('product-quantity')
-        //expect(productQuantity.textContent).toBe(initialQuantity.toString())
+        expect(mockReduceQuantity).toHaveBeenCalledTimes(initialQuantity)
     })
 
     each([
@@ -164,39 +159,8 @@ describe('CartItem', () => {
             await user.click(incrementProductQuantityButton)
         }
 
-        const productQuantity = screen.queryByTestId('product-quantity')
+        const productQuantity = await screen.findByText(userClicks.toString())
         expect(productQuantity.textContent).toBe(userClicks.toString())
     })
-
-        each([
-        2, 
-        3,
-        1,
-        5,
-        10,
-        7
-    ]).it('correctly decrements cartItem product quantity', async (initialQuantity) => {
-
-        render(
-            <BrowserRouter>
-                <Store.CartProvider>
-                    <CartItem title={title} price={price} image={image} rating={rating} quantity={initialQuantity} id={id}/>
-                </Store.CartProvider>
-            </BrowserRouter>
-        )
-
-        const user = userEvent.setup()
-
-        const decrementProductQuantityButton = screen.getByRole('button', {name: "-"})
-
-        for(let i = 0; i < initialQuantity; i++){
-
-            await user.click(decrementProductQuantityButton)
-        }
-
-        const productQuantity = screen.queryByTestId('product-quantity')
-        expect(productQuantity.textContent).toBe("1")
-    })
-
 })
 

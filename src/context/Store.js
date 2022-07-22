@@ -58,8 +58,6 @@ export function CartProvider({children}) {
     const reduceQuantity = (details) => {
         setCart(prevCart => {
 
-            console.log(prevCart)
-
             const productIndex = prevCart.findIndex((product) => product.id === details.id)
 
             if(prevCart[productIndex]?.quantity === 1){
