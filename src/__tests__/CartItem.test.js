@@ -74,7 +74,7 @@ describe('CartItem', () => {
     ]).it('correctly increments total cart quantity', async (userClicks) => {
 
         const mockAddToCart = jest.fn()
-        jest.spyOn(Store, 'useRemoveFromCart').mockReturnValue(mockAddToCart)
+        jest.spyOn(Store, 'useAddToCart').mockReturnValue(mockAddToCart)
 
         render(
             <BrowserRouter>
@@ -127,13 +127,10 @@ describe('CartItem', () => {
 
         const decrementProductQuantityButton = screen.getByRole('button', {name: "-"})
 
-
-
         for(let i = 0; i < initialQuantity; i++){
 
             await user.click(decrementProductQuantityButton)
         }
-
 
         expect(mockRemoveFromCart).toHaveBeenCalledTimes(initialQuantity)
 
