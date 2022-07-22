@@ -789,6 +789,20 @@ img.left-arrow{
 }
 
 @media(max-width: 1120px) {
+  .hero {
+    flex-wrap: wrap;
+  }
+  .hero-title {
+    font-size: 3rem;
+  }
+  .hero-text{
+    font-size: 1.5rem;
+  }
+  .hero-button {
+    width: 100%;
+    font-size: 2rem;
+    padding: 1rem;
+  }
   .cart-container {
     width: 88%;
   }
