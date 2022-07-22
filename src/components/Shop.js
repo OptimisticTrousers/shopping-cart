@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from "react"
 import ProductCard from "./ProductCard"
-import { Link, useOutletContext } from "react-router-dom"
+import { Link, Outlet, useOutletContext } from "react-router-dom"
 
 export default function Shop() {
 
     const products = useOutletContext()
 
     const renderedProducts = products.map((product) => {
-        return <Link key={product.id} to={`${product.id}`}>
+        return <Link key={product.id} to={`${product.id}`} state={{product}}>
             <ProductCard  image={product.image} rating={product.rating} title={product.title} price={product.price}/>
         </Link>
     })

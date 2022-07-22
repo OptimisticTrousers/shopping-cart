@@ -41,6 +41,8 @@ html {
 }
 
 .shop {
+
+  animation: fadeIn ease 2s;
   padding-bottom: 4rem;
 }
 body {

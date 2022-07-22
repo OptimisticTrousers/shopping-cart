@@ -1,7 +1,8 @@
-import { Link, useParams } from "react-router-dom"
+import { Link, useLocation, useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import leftArrow from '../assets/left-arrow.svg'
-import { useAddToCart } from "../context/Store"
+import { useAddToCart} from "../context/Store"
+import { useOutletContext } from "react-router-dom"
 
 export default function ProductDetail(){
 
@@ -9,13 +10,9 @@ export default function ProductDetail(){
 
     const params = useParams()
 
-    const [details, setDetails] = useState({})
+    const location = useLocation()
 
-    useEffect(() => {
-        fetch(`https://fakestoreapi.com/products/${params.id}`)
-            .then(res => res.json())
-            .then(data => setDetails(data))
-    }, [])
+    const [details, setDetails] = useState(location.state?.product)
 
     return (
         <div className="detail-container">
