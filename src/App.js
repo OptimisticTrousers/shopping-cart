@@ -12,9 +12,9 @@ export default function App() {
         <Navbar />
         <main>
           <Outlet />
+          <Footer />
         </main>
       </CartProvider>
-      <Footer />
     </div>
   );
 }

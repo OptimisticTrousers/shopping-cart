@@ -588,6 +588,22 @@ button > img{
   vertical-align: middle;
 }
 
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer a {
+  all: unset;
+}
+
+footer a:hover{
+  opacity: 0.9;
+  color:#efefef;
+  cursor: pointer;
+  font-size: 1rem;
+}
 
 
 img.right-arrow{
