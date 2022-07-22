@@ -1,5 +1,10 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
+@font-face {
+  font-family: ui-sans-serif;
+  src: url(./assets/Golos\ UI_Bold.ttf);
+}
 @font-face {
   font-family: andis-regular;
   src: url(assets/JAM\ Type\ Design\ -\ Andis\ Regular.otf);
@@ -648,6 +653,7 @@ button > img{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   background-color: rgb(229, 231, 235);
+  align-items: center;
   padding: 2rem;
 }
 
@@ -671,7 +677,20 @@ footer input {
 
   align-self: center;
 }
+
+.newsletter-title {
+  color: black;
+  font-family: ui-sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+}
+
+.newsletter-description {
+  font-family: Arial, Helvetica, sans-serif;
+}
 .newsletter-button {
+  margin-left: 2rem;
   width: min-content;
   padding: 0 24px;
   height: 48px;
@@ -730,8 +749,25 @@ img.left-arrow{
   filter: invert(36%) sepia(64%) saturate(3581%) hue-rotate(193deg) brightness(101%) contrast(101%);
 }
 
-.logo {
-  width: 64px;
+.linkedin-logo {
+  width: 34px;
+}
+
+.github-logo {
+  width: 34px;
+}
+
+
+.social {
+  text-align: center;
+  line-height: 3;
+}
+
+.logos {
+  display: flex;
+  column-gap: 0.25rem;
+  justify-content: center;
+  align-items: center;
 }
 
 @media(max-width: 1530px) {
@@ -826,7 +862,7 @@ img.left-arrow{
     width: 100%;
   }
   .products {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
   .image-detail {
     width: 150px;
