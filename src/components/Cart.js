@@ -13,6 +13,10 @@ export default function Cart() {
        return prevValue + currentValue.price
     }, 0)
 
+    const tax = subTotal * 0.05
+
+    const total = subTotal + tax
+
     return (
         <div className="cart-container">
             <div className="cart">
@@ -31,11 +35,11 @@ export default function Cart() {
                 </div>
                 <div className="cost">
                     <p className="tax">Tax</p>
-                    <p className="amount">+ $14.00</p>
+                    <p className="amount">+ {tax}</p>
                 </div>
                 <div className="cost">
                     <p className="total">Total</p>
-                    <p className="amount">$78.13</p>
+                    <p className="amount">{total}</p>
                 </div>
             </div>
             <div className="buttons">
