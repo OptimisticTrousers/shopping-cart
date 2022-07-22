@@ -39,9 +39,8 @@ export function CartProvider({children}) {
         setCart(prevCart => {
 
 
-            console.log("add" + JSON.stringify(prevCart))
-
             const productIndex = prevCart.findIndex((product) => product.id === details.id)
+
             if(prevCart.length === 0 || productIndex === -1){
 
                 return [...prevCart, {...details, quantity: 1}];
@@ -58,8 +57,6 @@ export function CartProvider({children}) {
 
     const reduceQuantity = (details) => {
         setCart(prevCart => {
-
-            console.log("reduce: " + JSON.stringify(prevCart))
 
             const productIndex = prevCart.findIndex((product) => product.id === details.id)
 
