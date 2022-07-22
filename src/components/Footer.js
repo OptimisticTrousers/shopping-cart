@@ -5,11 +5,13 @@ export default function Footer() {
     return (
         <footer>
             <div className="footer-content">
-                <div className="newsletter-input">
+                <div className="newsletter">
                     <p className='newsletter-description'>Subscribe to our newsletter!</p>
                     <h2 className='newsletter-title'>NEWSLETTER</h2>
-                    <input placeholder="Email"></input>
-                    <button className="newsletter-button" type="submit">Subscribe</button>
+                    <div className='newsletter-input'>
+                        <input placeholder="Email"></input>
+                        <button className="newsletter-button" type="submit">Subscribe</button>
+                    </div>
                 </div>
                 <div className="contacts">
                     <h2 className="contacts-title">Contacts</h2>
