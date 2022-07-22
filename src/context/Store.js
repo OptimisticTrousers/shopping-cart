@@ -30,8 +30,8 @@ export function useReduceQuantity() {
 
 export function CartProvider({children}) {
 
-    const [cartQuantity, setCartQuantity] = useState(0)
-    const [cart, setCart] = useState([])
+    const [cartQuantity, setCartQuantity] = useState(() => 0)
+    const [cart, setCart] = useState(() => [])
 
 
     const addToCart = (details) => {
@@ -58,17 +58,20 @@ export function CartProvider({children}) {
     const reduceQuantity = (details) => {
         setCart(prevCart => {
 
+            console.log(prevCart)
+
             const productIndex = prevCart.findIndex((product) => product.id === details.id)
 
-            if(prevCart[productIndex].quantity === 1){
+            if(prevCart[productIndex]?.quantity === 1){
                 return prevCart
             }
+            
 
             setCartQuantity(prevQuantity => prevQuantity - 1)
 
             const newCart = [...prevCart]
 
-            newCart.splice(productIndex, 1, {...details, quantity: prevCart[productIndex].quantity - 1})
+            newCart.splice(productIndex, 1, {...details, quantity: prevCart[productIndex]?.quantity - 1})
 
             return newCart
         })
