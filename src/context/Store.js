@@ -38,8 +38,14 @@ export function CartProvider({children}) {
         setCartQuantity(prevQuantity => prevQuantity + 1)
         setCart(prevCart => {
 
-            const productIndex = prevCart.findIndex((product) => product.id === details.id)
 
+            console.log("add" + JSON.stringify(prevCart))
+
+            const productIndex = prevCart.findIndex((product) => product.id === details.id)
+            if(prevCart.length === 0 || productIndex === -1){
+
+                return [...prevCart, {...details, quantity: 1}];
+            }
             if(productIndex !== -1){
                 const newCart = [...prevCart]
 
@@ -47,12 +53,13 @@ export function CartProvider({children}) {
 
                 return newCart;
             }
-            return [...prevCart, {...details, quantity: 1}];
         })
     }
 
     const reduceQuantity = (details) => {
         setCart(prevCart => {
+
+            console.log("reduce: " + JSON.stringify(prevCart))
 
             const productIndex = prevCart.findIndex((product) => product.id === details.id)
 

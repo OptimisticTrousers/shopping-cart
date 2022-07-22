@@ -108,7 +108,7 @@ describe('CartItem', () => {
         5,
         10,
         7
-    ]).it('correctly calls reduceQuantity a certain number of times', async (initialQuantity) => {
+    ]).it('correctly calls removeFromCart a certain number of times', async (initialQuantity) => {
 
         const mockRemoveFromCart = jest.fn()
         jest.spyOn(Store, 'useRemoveFromCart').mockReturnValue(mockRemoveFromCart)
