@@ -22,10 +22,10 @@ export function useCart() {
     return cart
 }
 
-export function useRemoveFromCart() {
-    const {removeFromCart} = useContext(CartContext)
+export function useReduceQuantity() {
+    const {reduceQuantity} = useContext(CartContext)
 
-    return removeFromCart
+    return reduceQuantity
 }
 
 export function CartProvider({children}) {
@@ -51,7 +51,7 @@ export function CartProvider({children}) {
         })
     }
 
-    const removeFromCart = (details) => {
+    const reduceQuantity = (details) => {
         setCart(prevCart => {
 
             const productIndex = prevCart.findIndex((product) => product.id === details.id)
@@ -71,7 +71,7 @@ export function CartProvider({children}) {
     }
 
     return (
-        <CartContext.Provider value={{cart, addToCart, removeFromCart}}>
+        <CartContext.Provider value={{cart, addToCart, reduceQuantity}}>
             <CartQuantityContext.Provider value={{cartQuantity}}>
                 {children}
             </CartQuantityContext.Provider>

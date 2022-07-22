@@ -1,5 +1,5 @@
 import trash from '../assets/trash.svg'
-import { useAddToCart, useRemoveFromCart } from '../context/Store'
+import { useAddToCart, useReduceQuantity} from '../context/Store'
 
 export default function CartItem(props) {
 
@@ -7,7 +7,7 @@ export default function CartItem(props) {
 
     const addToCart = useAddToCart()
 
-    const removeFromCart = useRemoveFromCart()
+    const reduceQuantity = useReduceQuantity()
 
     return (
         <div className="cart-item-container">
@@ -27,7 +27,7 @@ export default function CartItem(props) {
                     <div className="quantity">
                         <button type="button" onClick={() => addToCart(props)}>+</button>
                         <p className="quantity-display" data-testid="product-quantity">{quantity}</p>
-                        <button type="button" onClick={() => removeFromCart(props)}>-</button>
+                        <button type="button" onClick={() => reduceQuantity(props)}>-</button>
                     </div>
                     <div className="delete">
                         <img className="trash-image" src={trash} alt="trash can"/>
