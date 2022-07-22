@@ -1,19 +1,11 @@
 import React from 'react'
-import {render, screen, unmount} from '@testing-library/react'
+import {render, screen} from '@testing-library/react'
 import '@testing-library/jest-dom'
 import userEvent from '@testing-library/user-event'
 import CartItem from '../components/CartItem';
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import App from '../App'
-import Home from '../components/Home'
-import Shop from '../components/Shop'
-import Cart from '../components/Cart'
-import ProductDetail from '../components/ProductDetail'
-import Navbar from '../components/Navbar'
+import {BrowserRouter} from 'react-router-dom'
 import each from 'jest-each'
 import * as Store from '../context/Store';
-import { act } from 'react-dom/test-utils';
-import ReactDOM, { unmountComponentAtNode } from 'react-dom';
 
 describe('CartItem', () => {
 
