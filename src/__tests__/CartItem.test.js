@@ -98,6 +98,45 @@ describe('CartItem', () => {
         //const productQuantity = screen.queryByTestId('product-quantity')
         //expect(productQuantity.textContent).toBe(userClicks.toString())
     })
+    each([
+        2, 
+        3,
+        1,
+        5,
+        10,
+        7
+    ]).it('correctly decrements total cart quantity', async (initialQuantity) => {
+
+        render(
+            <BrowserRouter>
+                <CartProvider>
+                    <Navbar /> 
+                    <CartItem title={title} price={price} image={image} rating={rating} quantity={initialQuantity} id={id}/>
+                </CartProvider>
+            </BrowserRouter>
+        )
+
+        const user = userEvent.setup()
+
+        const decrementProductQuantityButton = screen.getByRole('button', {name: "-"})
+
+        const navQuantity = screen.queryByTestId('quantity')
+
+        for(let i = 0; i < initialQuantity; i++){
+
+            if(navQuantity.textContent === "1"){
+                break;
+            }
+
+            await user.click(decrementProductQuantityButton)
+        }
+
+
+
+        expect(navQuantity.textContent).toBe("1")
+        //const productQuantity = screen.queryByTestId('product-quantity')
+        //expect(productQuantity.textContent).toBe(userClicks.toString())
+    })
 
 })
 
