@@ -9,6 +9,10 @@ export default function Cart() {
 
     const cart = useCart()
 
+    const subTotal = cart.reduce((prevValue, currentValue) => {
+       return prevValue + currentValue.price
+    }, 0)
+
     return (
         <div className="cart-container">
             <div className="cart">
@@ -19,7 +23,7 @@ export default function Cart() {
                 })}
                 <div className="cost">
                     <p className="subtotal">Subtotal</p>
-                    <p className="amount">$400.99</p>
+                    <p className="amount" data-testid="subtotal">$400.99</p>
                 </div>
                 <div className="cost">
                     <p className="delivery">Delivery</p>
