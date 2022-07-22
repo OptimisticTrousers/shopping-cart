@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import githubLogo from '../assets/github-logo.svg'
 import linkedInLogo from '../assets/linkedin-logo.svg'
 export default function Footer() {
@@ -15,6 +16,18 @@ export default function Footer() {
                     <p className="phone-text">Phone: <span>555-999-1111</span></p>
                     <p className="email-text">Email: <span>bobjones@gmail.com</span></p>
                     <p className="address-text">Address: <span>Planet Earth, Milky Way</span></p>
+                </div>
+                <div className="footer-links">
+                    <h2 className='contacts-title'>Links</h2>
+                    <Link to="/">
+                        <p>Home</p>
+                    </Link>
+                    <Link to="/shop">
+                        <p>Shop</p>
+                    </Link>
+                    <Link to="/cart">
+                        <p>Cart</p>
+                    </Link>
                 </div>
                 <div className="social">
                     <h2 className="contacts-title">Social</h2>

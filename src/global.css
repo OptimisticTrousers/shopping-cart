@@ -651,7 +651,7 @@ button > img{
 
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 600px repeat(auto-fit, minmax(400px, 1fr));
   background-color: rgb(229, 231, 235);
   align-items: center;
   padding: 2rem;
@@ -724,15 +724,13 @@ footer a {
 }
 
 footer span {
-  color:#6879c6;
   padding-left: 2rem;
+  color: rgb(100, 100, 100);
 }
 
 footer a:hover{
-  opacity: 0.9;
-  color:#efefef;
+  color:#0085fe;
   cursor: pointer;
-  font-size: 1rem;
 }
 
 
@@ -763,6 +761,12 @@ img.left-arrow{
   line-height: 3;
 }
 
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
 .logos {
   display: flex;
   column-gap: 0.25rem;
