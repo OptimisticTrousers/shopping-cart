@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartItem snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="cart-container"
+  >
+    <div
+      class="cart"
+    >
+      <h2
+        class="cart-title"
+      >
+        Your Cart
+      </h2>
+      <div
+        class="cost"
+      >
+        <p
+          class="subtotal"
+        >
+          Subtotal
+        </p>
+        <p
+          class="amount"
+        >
+          $400.99
+        </p>
+      </div>
+      <div
+        class="cost"
+      >
+        <p
+          class="delivery"
+        >
+          Delivery
+        </p>
+        <p
+          class="amount"
+        >
+          $0.00
+        </p>
+      </div>
+      <div
+        class="cost"
+      >
+        <p
+          class="tax"
+        >
+          Tax
+        </p>
+        <p
+          class="amount"
+        >
+          + $14.00
+        </p>
+      </div>
+      <div
+        class="cost"
+      >
+        <p
+          class="total"
+        >
+          Total
+        </p>
+        <p
+          class="amount"
+        >
+          $78.13
+        </p>
+      </div>
+    </div>
+    <div
+      class="buttons"
+    >
+      <button
+        type="button"
+      >
+        Check Out
+        <img
+          alt="right arrow"
+          class="right-arrow"
+          src="right-arrow.svg"
+        />
+      </button>
+      <a
+        href="/shop"
+      >
+        <button
+          type="button"
+        >
+          <img
+            alt="left arrow"
+            class="left-arrow"
+            src="left-arrow.svg"
+          />
+           Back To Products
+        </button>
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;

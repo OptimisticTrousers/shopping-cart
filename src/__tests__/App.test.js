@@ -54,26 +54,6 @@ describe("App" , () => {
                 }]))
     })
 
-    it("snapshot", () => {
-
-        const {asFragment} = render(
-            <React.StrictMode>
-                <BrowserRouter>
-                    <Routes>
-                        <Route path="/" element={<App />} >
-                            <Route index element={<Home />} />
-                            <Route path="shop" element={<Shop />} />
-                            <Route path="shop/:id" element={<ProductDetail />} />
-                            <Route path="cart" element={<Cart />} />
-                        </Route>
-                    </Routes>
-                </BrowserRouter>
-            </React.StrictMode>
-        )
-
-        expect(asFragment()).toMatchSnapshot()
-    })
-
     it('user can increment quantity', async () => {
 
         render(

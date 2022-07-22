@@ -20,7 +20,6 @@ describe("ProductDetail", () => {
 
     beforeEach(() => {
 
-        fetch.mockClear()
 
         fetch.mockResponseOnce(JSON.stringify({
                     id: 1,
@@ -34,6 +33,11 @@ describe("ProductDetail", () => {
                     count: 120
                     }
                 }))
+    })
+
+    afterAll(() => {
+
+        fetch.mockClear()
     })
 
     it("snapshot", () => {
