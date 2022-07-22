@@ -303,7 +303,7 @@ nav{
 }
 
 main {
-  background-color: #e8e8e8;
+  background: linear-gradient(150deg, rgb(221, 221, 221) 49.63%, rgb(110, 136, 161) 100.00%);
 }
 
 .description-detail {
@@ -446,6 +446,7 @@ p.quantity-display {
 }
 
 .shop-title, .shop-description {
+  font-family: tangent-bold;
   padding-top: 1rem;
   text-align: center;
 }
