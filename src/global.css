@@ -648,19 +648,29 @@ button > img{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   background-color: rgb(229, 231, 235);
-  align-items: center;
   padding: 2rem;
 }
 
-footer input {
-  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+input:focus{
   background-color: white;
-  border-bottom-color: rgb(229, 231,235);
+}
+
+footer input {
+  box-shadow: outset rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  background-color: white;
   width: 290px;
   text-size-adjust: auto;
   padding: 16px;
+  border-radius: 6px;
+  padding: 10px;
+  width: 400px;
+  font-size: 16px;
 }
 
+.contacts {
+
+  align-self: center;
+}
 .newsletter-button {
   width: min-content;
   padding: 0 24px;
@@ -669,11 +679,34 @@ footer input {
   background-color: white;
   color: black;
   font-size: ui-sans-serif;
+  align-self: center;
   box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px
+}
+
+.newsletter-button:hover{
+  color: white;
+  background-color: black;
+  transform: scale(1.05);
 }
 
 footer a {
   all: unset;
+}
+
+.contacts-title {
+  color: black;
+  font-size: 1rem;
+  letter-spacing: 0.4px;
+  line-height: 24px;
+}
+
+.contacts{
+  line-height: 24px;
+}
+
+footer span {
+  color:#6879c6;
+  padding-left: 2rem;
 }
 
 footer a:hover{
@@ -695,6 +728,10 @@ img.left-arrow{
   width: 20px;
   height: 20px;
   filter: invert(36%) sepia(64%) saturate(3581%) hue-rotate(193deg) brightness(101%) contrast(101%);
+}
+
+.logo {
+  width: 64px;
 }
 
 @media(max-width: 1530px) {
