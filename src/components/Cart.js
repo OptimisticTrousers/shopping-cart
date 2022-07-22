@@ -43,7 +43,7 @@ export default function Cart() {
                 </div>
             </div>
             <div className="buttons">
-                <button type="button">Check Out<img className="right-arrow" src={rightArrow} alt="right arrow"/></button>
+                <button type="button" onClick={location.reload()}>Check Out<img className="right-arrow" src={rightArrow} alt="right arrow"/></button>
                 <Link to="/shop">
                     <button type="button"><img className="left-arrow" src={leftArrow} alt="left arrow" /> Back To Products</button>
                 </Link>

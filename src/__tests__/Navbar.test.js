@@ -21,8 +21,6 @@ describe("Navbar", () => {
             }),
         }))
 
-        
-
     })
 
     beforeEach(() => {
