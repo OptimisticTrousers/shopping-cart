@@ -45,6 +45,7 @@ html {
   animation: fadeIn ease 2s;
   padding-bottom: 4rem;
 }
+
 body {
   min-height: 100%;
   margin: 0;
@@ -365,6 +366,7 @@ ul {
 
   background-color: white;
   border-radius: 20px;
+  animation: fadeIn ease 0.5s;
   padding: 0rem 1rem;
 }
 
