@@ -644,10 +644,32 @@ button > img{
   }
 }
 
-footer {
-  margin-top: auto;
-  text-align: center;
-  padding: 1rem;
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  background-color: rgb(229, 231, 235);
+  align-items: center;
+  padding: 2rem;
+}
+
+footer input {
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  background-color: white;
+  border-bottom-color: rgb(229, 231,235);
+  width: 290px;
+  text-size-adjust: auto;
+  padding: 16px;
+}
+
+.newsletter-button {
+  width: min-content;
+  padding: 0 24px;
+  height: 48px;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  font-size: ui-sans-serif;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px
 }
 
 footer a {
