@@ -8,7 +8,10 @@ exports[`CartItem screenshot 1`] = `
     <div
       class="item-image"
     >
-      <img />
+      <img
+        alt="Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"
+        src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+      />
     </div>
     <div
       class="cart-item-details"
@@ -18,11 +21,13 @@ exports[`CartItem screenshot 1`] = `
       >
         <h2
           class="item-title product-title"
-        />
+        >
+          Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops
+        </h2>
         <p
           class="item-price product-price"
         >
-          $
+          $109.95
         </p>
       </div>
       <div
@@ -31,7 +36,7 @@ exports[`CartItem screenshot 1`] = `
         <p
           class="item-stock-price"
         >
-          $
+          $109.95
         </p>
         <p
           class="item-stock-status"
@@ -53,7 +58,9 @@ exports[`CartItem screenshot 1`] = `
           <p
             class="quantity-display"
             data-testid="product-quantity"
-          />
+          >
+            1
+          </p>
           <button
             type="button"
           >

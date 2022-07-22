@@ -1,7 +1,11 @@
 import trash from '../assets/trash.svg'
+import { useAddToCart } from '../context/Store'
+
 export default function CartItem(props) {
 
-    const {image, title, price, quantity, id} = props
+    const {image, title, price, quantity} = props
+
+    const addToCart = useAddToCart()
 
     return (
         <div className="cart-item-container">
@@ -19,7 +23,7 @@ export default function CartItem(props) {
                 </div>
                 <div className="user-input">
                     <div className="quantity">
-                        <button type="button" >+</button>
+                        <button type="button" onClick={() => addToCart(props)}>+</button>
                         <p className="quantity-display" data-testid="product-quantity">{quantity}</p>
                         <button type="button">-</button>
                     </div>

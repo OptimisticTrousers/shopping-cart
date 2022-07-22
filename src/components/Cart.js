@@ -14,8 +14,8 @@ export default function Cart() {
             <div className="cart">
                 <h2 className="cart-title">Your Cart</h2>
                 {cart.map(item => {
-                        const {id, image, price, title, quantity} = item
-                        return <CartItem key={id} id={id} image={image} price={price} title={title} quantity={quantity} />
+                        const {id, image, price, title, quantity, description, rating, category} = item
+                        return <CartItem key={id} id={id} image={image} price={price} title={title} quantity={quantity} description={description} rating={rating} category={category} />
                 })}
                 <div className="cost">
                     <p className="subtotal">Subtotal</p>
