@@ -8,8 +8,8 @@ export default function Hero () {
                 <p>Our functional funware serves to express an individuals uniqueness through color and fabric. Functional funware that exemplifies todays leisure centric society.</p>
                 <button className='hero-button'>Shop Now</button>
             </div>
-            <div className="hero-image">
-                <img src={pants} alt="pants"/>
+            <div className="hero-image-container">
+                <img className="hero-image" src={pants} alt="pants"/>
             </div>
         </div>
     )
