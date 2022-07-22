@@ -93,13 +93,7 @@ describe('CartItem', () => {
             await user.click(incrementProductQuantityButton)
         }
 
-
-
         expect(mockAddToCart).toHaveBeenCalledTimes(userClicks)
-        //const navQuantity = screen.queryByTestId('quantity')
-        //expect(navQuantity.textContent).toBe(userClicks.toString())
-        //const productQuantity = screen.queryByTestId('product-quantity')
-        //expect(productQuantity.textContent).toBe(userClicks.toString())
     })
     each([
         2, 
@@ -142,24 +136,32 @@ describe('CartItem', () => {
         7
     ]).it('correctly increments cartItem product quantity', async (userClicks) => {
 
+        Store.useCart = jest.fn().mockReturnValue([{ 
+        id: 1,
+        title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops", 
+        price: 109.95, 
+        image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg", 
+        rating: { rate: 3.9, count: 120 },
+        quantity: 1,
+    }])
         render(
             <BrowserRouter>
                 <Store.CartProvider>
-                    <CartItem title={title} price={price} image={image} rating={rating} quantity={quantity} id={id}/>
+                    <Cart />
                 </Store.CartProvider>
             </BrowserRouter>
         )
 
         const user = userEvent.setup()
 
-        const incrementProductQuantityButton = screen.getByRole('button', {name: "+"})
+        const incrementProductQuantityButton = await screen.findByRole('button', {name: "+"})
 
         for(let i = 0; i < userClicks; i++){
 
             await user.click(incrementProductQuantityButton)
         }
 
-        const productQuantity = await screen.findByText(userClicks.toString())
+        const productQuantity = await screen.findByTestId("product-quantity")
         expect(productQuantity.textContent).toBe(userClicks.toString())
     })
 })
