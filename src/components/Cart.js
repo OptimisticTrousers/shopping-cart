@@ -39,7 +39,7 @@ export default function Cart() {
                 </div>
                 <div className="cost">
                     <p className="total">Total</p>
-                    <p className="amount">{total}</p>
+                    <p className="amount" data-testid="total">{total}</p>
                 </div>
             </div>
             <div className="buttons">

@@ -67,6 +67,7 @@ exports[`CartItem snapshot 1`] = `
         </p>
         <p
           class="amount"
+          data-testid="total"
         >
           0
         </p>
