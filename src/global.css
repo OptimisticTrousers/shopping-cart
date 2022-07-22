@@ -616,6 +616,8 @@ button > img{
 }
 
 .hero-text {
+  width: 100%;
+  height: 100%;
   padding: 2rem;
   font-size: 2rem;
   line-height: 2.5;
@@ -623,16 +625,18 @@ button > img{
 }
 
 .hero-image-container{
+  width: 100%;
   padding: 2rem;
 }
 
 .hero-image {
+  width: 100%;
   border-radius: 100px;
 }
 
 .hero-button {
   margin-top: 2rem;
-  width: 39rem;
+  width: 100%;
   font-size: 4rem;
   border-radius: 50px;
   padding: 2rem;
