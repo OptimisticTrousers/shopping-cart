@@ -126,43 +126,5 @@ describe('CartItem', () => {
 
         expect(mockReduceQuantity).toHaveBeenCalledTimes(initialQuantity)
     })
-
-    each([
-        2, 
-        3,
-        1,
-        5,
-        10,
-        7
-    ]).it('correctly increments cartItem product quantity', async (userClicks) => {
-
-        Store.useCart = jest.fn().mockReturnValue([{ 
-        id: 1,
-        title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops", 
-        price: 109.95, 
-        image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg", 
-        rating: { rate: 3.9, count: 120 },
-        quantity: 1,
-    }])
-        render(
-            <BrowserRouter>
-                <Store.CartProvider>
-                    <Cart />
-                </Store.CartProvider>
-            </BrowserRouter>
-        )
-
-        const user = userEvent.setup()
-
-        const incrementProductQuantityButton = await screen.findByRole('button', {name: "+"})
-
-        for(let i = 0; i < userClicks; i++){
-
-            await user.click(incrementProductQuantityButton)
-        }
-
-        const productQuantity = await screen.findByTestId("product-quantity")
-        expect(productQuantity.textContent).toBe(userClicks.toString())
-    })
 })
 
