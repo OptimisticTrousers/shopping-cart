@@ -35,7 +35,7 @@ export default function Cart() {
                 </div>
                 <div className="cost">
                     <p className="tax">Tax</p>
-                    <p className="amount">+ {tax}</p>
+                    <p className="amount" data-testid="tax">+ {tax}</p>
                 </div>
                 <div className="cost">
                     <p className="total">Total</p>

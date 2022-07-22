@@ -52,8 +52,9 @@ exports[`CartItem snapshot 1`] = `
         </p>
         <p
           class="amount"
+          data-testid="tax"
         >
-          + $14.00
+          + 0
         </p>
       </div>
       <div
@@ -67,7 +68,7 @@ exports[`CartItem snapshot 1`] = `
         <p
           class="amount"
         >
-          $78.13
+          0
         </p>
       </div>
     </div>
