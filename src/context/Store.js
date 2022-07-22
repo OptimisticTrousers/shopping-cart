@@ -40,7 +40,7 @@ export function CartProvider({children}) {
     const [cart, setCart] = useState(() => [])
 
     const removeFromCart = (details) => {
-        setCartQuantity(prevQuantity => prevQuantity - 1)
+        setCartQuantity(prevQuantity => prevQuantity - details.quantity)
         setCart(prevCart => {
             const productIndex = prevCart.findIndex((product) => product.id === details.id)
 

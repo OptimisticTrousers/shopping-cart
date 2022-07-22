@@ -126,5 +126,24 @@ describe('CartItem', () => {
 
         expect(mockReduceQuantity).toHaveBeenCalledTimes(initialQuantity)
     })
+
+    it("correctly deletes a cartitem", async () => {
+
+        render(
+            <BrowserRouter>
+                <Store.CartProvider>
+                    <CartItem title={title} price={price} image={image} rating={rating} quantity={quantity} id={id}/>
+                </Store.CartProvider>
+            </BrowserRouter>
+        )
+
+        const user = userEvent.setup()
+
+        const deleteButton = screen.getByText("Delete")
+
+        await user.click(deleteButton)
+
+        expect(deleteButton).not.toBeInTheDocument()
+    })
 })
 
