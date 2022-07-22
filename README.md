@@ -15,6 +15,7 @@ Beyond that, other learning outcomes were:
 - Design reusable components
 - Fetching mock data from the Fake Store API https://fakestoreapi.com/
 - Practicing state management
+- Using snapshot tests with Jest and Testing Library
 
 ## Development
 
