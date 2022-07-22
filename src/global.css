@@ -760,6 +760,9 @@ img.left-arrow{
   filter: invert(36%) sepia(64%) saturate(3581%) hue-rotate(193deg) brightness(101%) contrast(101%);
 }
 
+.buttons * {
+  border-radius: 8px;
+}
 .linkedin-logo {
   width: 34px;
 }
