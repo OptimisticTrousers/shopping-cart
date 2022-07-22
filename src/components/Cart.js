@@ -58,7 +58,7 @@ export default function Cart() {
                     event.preventDefault()
                     window.location.reload()
                 }}>Check Out<img className="right-arrow" src={rightArrow} alt="right arrow"/></button>
-                <Link to="/">
+                <Link to="/shop">
                     <button type="button"><img className="left-arrow" src={leftArrow} alt="left arrow" /> Back To Products</button>
                 </Link>
             </div>

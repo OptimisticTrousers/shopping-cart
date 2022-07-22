@@ -14,6 +14,18 @@ export default function Navbar() {
                         <img className="logo-image" src={logo} alt="smiling pair of pants"/>
                     </Link>
                     <h1 className="nav-title">The Optimistic Store</h1>
+                    <ul>
+                        <li>
+                            <Link to="/">
+                                <h2>HOME</h2>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/shop">
+                                <h2 >SHOP</h2>
+                            </Link>
+                        </li>
+                    </ul>
                 </div>
                     <Link to="/cart">
                         <span data-testid="quantity">{quantity}</span>

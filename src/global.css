@@ -588,6 +588,39 @@ button > img{
   vertical-align: middle;
 }
 
+.hero-title {
+  font-family: bayer-sans;
+  font-size: 3.1rem;
+  line-height: 2rem;
+  word-spacing: 2rem;
+  letter-spacing: 2rem;
+}
+
+.hero {
+  height: 100vh;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  animation: fadeIn ease 2s;
+}
+
+.hero-text {
+  padding: 2rem;
+}
+
+.hero-image{
+  padding: 2rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1
+  }
+}
+
 footer {
   margin-top: auto;
   text-align: center;
