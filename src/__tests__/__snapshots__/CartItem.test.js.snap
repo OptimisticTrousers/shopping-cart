@@ -4,6 +4,7 @@ exports[`CartItem screenshot 1`] = `
 <DocumentFragment>
   <div
     class="cart-item-container"
+    data-testid="cart-item"
   >
     <div
       class="item-image"

@@ -12,7 +12,7 @@ export default function CartItem(props) {
     const removeFromCart = useRemoveFromCart()
 
     return (
-        <div className="cart-item-container">
+        <div className="cart-item-container" data-testid="cart-item">
             <div className="item-image">
                 <img src={image} alt={title}/>
             </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import {render, screen} from '@testing-library/react'
+import {render, screen, unmount} from '@testing-library/react'
 import '@testing-library/jest-dom'
 import userEvent from '@testing-library/user-event'
 import CartItem from '../components/CartItem';
@@ -13,6 +13,7 @@ import Navbar from '../components/Navbar'
 import each from 'jest-each'
 import * as Store from '../context/Store';
 import { act } from 'react-dom/test-utils';
+import ReactDOM, { unmountComponentAtNode } from 'react-dom';
 
 describe('CartItem', () => {
 
@@ -129,7 +130,7 @@ describe('CartItem', () => {
 
     it("correctly deletes a cartitem", async () => {
 
-        render(
+        const {unmount} = render(
             <BrowserRouter>
                 <Store.CartProvider>
                     <CartItem title={title} price={price} image={image} rating={rating} quantity={quantity} id={id}/>
@@ -142,6 +143,8 @@ describe('CartItem', () => {
         const deleteButton = screen.getByText("Delete")
 
         await user.click(deleteButton)
+
+        unmount()
 
         expect(deleteButton).not.toBeInTheDocument()
     })
