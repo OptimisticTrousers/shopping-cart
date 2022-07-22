@@ -121,6 +121,10 @@ nav {
   transition: 200ms linear;
 }
 
+.add-to-cart-button:active {
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
 .add-to-cart-button:hover {
   color: #DEE7E7;
   cursor: pointer;
