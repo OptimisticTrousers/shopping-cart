@@ -23,7 +23,7 @@ export default function Cart() {
                 })}
                 <div className="cost">
                     <p className="subtotal">Subtotal</p>
-                    <p className="amount" data-testid="subtotal">$400.99</p>
+                    <p className="amount" data-testid="subtotal">{subTotal}</p>
                 </div>
                 <div className="cost">
                     <p className="delivery">Delivery</p>

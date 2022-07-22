@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CartItem adding a product to cart 1`] = `[Function]`;
-
 exports[`CartItem snapshot 1`] = `
 <DocumentFragment>
   <div
@@ -25,8 +23,9 @@ exports[`CartItem snapshot 1`] = `
         </p>
         <p
           class="amount"
+          data-testid="subtotal"
         >
-          $400.99
+          0
         </p>
       </div>
       <div
