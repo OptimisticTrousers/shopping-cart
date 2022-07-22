@@ -1,16 +1,10 @@
 import React, {useEffect, useState} from "react"
 import ProductCard from "./ProductCard"
-import { Link } from "react-router-dom"
+import { Link, useOutletContext } from "react-router-dom"
 
 export default function Shop() {
 
-    const [products, setProducts] = useState([])
-
-    useEffect(() => {
-        fetch('https://fakestoreapi.com/products')
-            .then(res => res.json())
-            .then(data => setProducts(data))
-    }, [])
+    const products = useOutletContext()
 
     const renderedProducts = products.map((product) => {
         return <Link key={product.id} to={`${product.id}`}>
