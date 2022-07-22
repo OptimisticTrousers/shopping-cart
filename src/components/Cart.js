@@ -13,7 +13,7 @@ export default function Cart() {
 
     const tax = (subTotal * 0.05).toFixed(2)
 
-    const total = Number(subTotal) + Number(tax)
+    const total = (Number(subTotal) + Number(tax)).toFixed(2)
 
     return (
         <div className="cart-container">
