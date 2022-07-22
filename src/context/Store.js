@@ -52,13 +52,6 @@ export function CartProvider({children}) {
     }
 
     const removeFromCart = (details) => {
-        setCartQuantity(prevQuantity => {
-            if(prevQuantity === 1){
-                return prevQuantity
-            }
-
-            return prevQuantity - 1
-        })
         setCart(prevCart => {
 
             const productIndex = prevCart.findIndex((product) => product.id === details.id)
@@ -66,6 +59,8 @@ export function CartProvider({children}) {
             if(prevCart[productIndex].quantity === 1){
                 return prevCart
             }
+
+            setCartQuantity(prevQuantity => prevQuantity - 1)
 
             const newCart = [...prevCart]
 
