@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`CartItem adding a product to cart 1`] = `[Function]`;
+
 exports[`CartItem snapshot 1`] = `
 <DocumentFragment>
   <div
