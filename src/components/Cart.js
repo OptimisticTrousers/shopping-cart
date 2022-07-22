@@ -15,14 +15,17 @@ export default function Cart() {
 
     const total = (Number(subTotal) + Number(tax)).toFixed(2)
 
+    const renderedCart = cart.map(item => {
+
+        const {id, image, price, title, quantity, description, rating, category} = item
+        return <CartItem key={id} id={id} image={image} price={price} title={title} quantity={quantity} description={description} rating={rating} category={category} />
+    })
+
     return (
         <div className="cart-container">
             <div className="cart">
                 <h2 className="cart-title">Your Cart</h2>
-                {cart.map(item => {
-                        const {id, image, price, title, quantity, description, rating, category} = item
-                        return <CartItem key={id} id={id} image={image} price={price} title={title} quantity={quantity} description={description} rating={rating} category={category} />
-                })}
+                {cart.length ? renderedCart : <p>Stuff</p>}
                 <div className="cost">
                     <p className="subtotal">Subtotal</p>
                     <p className="amount" data-testid="subtotal">${subTotal}</p>
