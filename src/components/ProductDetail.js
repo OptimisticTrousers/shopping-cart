@@ -23,7 +23,7 @@ export default function ProductDetail(){
                 <img className="image-detail" src={details.image} alt={details.title}/>
             </div>
             <div className="product-details">
-                <Link to="/shop">
+                <Link to="/">
                     <button type="button"><img className="left-arrow" src={leftArrow} alt="left arrow" /> Back To Products</button>
                 </Link>
                 <h1 className="product-title">{details.title}</h1>
