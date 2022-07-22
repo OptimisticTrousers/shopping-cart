@@ -9,11 +9,11 @@ export default function Cart() {
 
     const cart = useCart()
 
-    const subTotal = cart.reduce((prevSubtotal, product) => prevSubtotal + product.price * product.quantity, 0)
+    const subTotal = (cart.reduce((prevSubtotal, product) => prevSubtotal + product.price * product.quantity, 0)).toFixed(2)
 
-    const tax = subTotal * 0.05
+    const tax = (subTotal * 0.05).toFixed(2)
 
-    const total = subTotal + tax
+    const total = Number(subTotal) + Number(tax)
 
     return (
         <div className="cart-container">
