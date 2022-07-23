@@ -3,25 +3,27 @@ import ReactDOM from 'react-dom/client';
 import './global.css'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {HashRouter, Routes, Route} from 'react-router-dom'
 import Shop from './components/Shop';
 import Home from './components/Home'
 import Cart from './components/Cart'
 import ProductDetail from './components/ProductDetail';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const URL = process.env.PUBLIC_URL;
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/TOP-shopping-cart">
+    <HashRouter >
     <Routes>
-      <Route path="/" element={<App />} >
+      <Route path={URL + "/"} element={<App />} >
         <Route index element={<Home />} />
-        <Route path="shop" element={<Shop />} />
-          <Route path="shop/:id" element={<ProductDetail />} />
-        <Route path="cart" element={<Cart />} />
+        <Route path={URL + "/shop"} element={<Shop />} />
+          <Route path={URL + "/shop/:id"} element={<ProductDetail />} />
+        <Route path={URL + "/cart"} element={<Cart />} />
       </Route>
     </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
 
