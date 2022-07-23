@@ -1,18 +1,15 @@
 import { Link, useLocation, useParams } from "react-router-dom"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import leftArrow from '../assets/left-arrow.svg'
 import { useAddToCart} from "../context/Store"
-import { useOutletContext } from "react-router-dom"
 
 export default function ProductDetail(){
 
     const addToCart = useAddToCart()
 
-    const params = useParams()
-
     const location = useLocation()
 
-    const [details, setDetails] = useState(location.state?.product)
+    const [details] = useState(location.state?.product)
 
     return (
         <div className="detail-container">

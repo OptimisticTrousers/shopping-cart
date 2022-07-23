@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import star from '../assets/star.svg'
 
 export default function ProductCard({image, rating, title, price}) {

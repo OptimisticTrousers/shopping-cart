@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from "react"
+import React from "react"
 import ProductCard from "./ProductCard"
-import { Link, Outlet, useOutletContext } from "react-router-dom"
+import { Link, useOutletContext } from "react-router-dom"
 
 export default function Shop() {
 

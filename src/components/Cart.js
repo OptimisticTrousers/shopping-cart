@@ -1,5 +1,4 @@
 import CartItem from "./CartItem"
-import logo from '../assets/optimistictrousers.jpg'
 import rightArrow from '../assets/right-arrow.svg'
 import leftArrow from '../assets/left-arrow.svg'
 import { Link } from "react-router-dom"
