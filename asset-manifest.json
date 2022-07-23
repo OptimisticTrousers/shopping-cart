@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/TOP-shopping-cart/static/css/main.0f408bc6.css",
-    "main.js": "/TOP-shopping-cart/static/js/main.8096480d.js",
+    "main.js": "/TOP-shopping-cart/static/js/main.7111b3ab.js",
     "static/js/787.d6fe38e8.chunk.js": "/TOP-shopping-cart/static/js/787.d6fe38e8.chunk.js",
     "static/media/Tangent-Bold.ttf": "/TOP-shopping-cart/static/media/Tangent-Bold.d0a2ab84e29e29d86091.ttf",
     "static/media/Stem-Regular.otf": "/TOP-shopping-cart/static/media/Stem-Regular.99b61936c02a7b0c7a73.otf",
@@ -20,11 +20,11 @@
     "static/media/left-arrow.svg": "/TOP-shopping-cart/static/media/left-arrow.c99599f1c09c7ce3fb1493caf2b3050c.svg",
     "static/media/trash.svg": "/TOP-shopping-cart/static/media/trash.cf8fe077f0640bf7623969c4664e8253.svg",
     "main.0f408bc6.css.map": "/TOP-shopping-cart/static/css/main.0f408bc6.css.map",
-    "main.8096480d.js.map": "/TOP-shopping-cart/static/js/main.8096480d.js.map",
+    "main.7111b3ab.js.map": "/TOP-shopping-cart/static/js/main.7111b3ab.js.map",
     "787.d6fe38e8.chunk.js.map": "/TOP-shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0f408bc6.css",
-    "static/js/main.8096480d.js"
+    "static/js/main.7111b3ab.js"
   ]
 }
