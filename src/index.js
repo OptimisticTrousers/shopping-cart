@@ -12,13 +12,13 @@ import ProductDetail from './components/ProductDetail';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/TOP-shopping-cart">
     <Routes>
-      <Route path="/TOP-shopping-cart" element={<App />} >
+      <Route path="/" element={<App />} >
         <Route index element={<Home />} />
-        <Route path="/TOP-shopping-cart/shop" element={<Shop />} />
-          <Route path="/TOP-shopping-cart/shop/:id" element={<ProductDetail />} />
-        <Route path="/TOP-shopping-cart/cart" element={<Cart />} />
+        <Route path="shop" element={<Shop />} />
+          <Route path="shop/:id" element={<ProductDetail />} />
+        <Route path="cart" element={<Cart />} />
       </Route>
     </Routes>
     </BrowserRouter>

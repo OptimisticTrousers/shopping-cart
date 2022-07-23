@@ -1,4 +1,4 @@
-import { Link, useLocation, useParams } from "react-router-dom"
+import { Link, useLocation} from "react-router-dom"
 import { useState } from "react"
 import leftArrow from '../assets/left-arrow.svg'
 import { useAddToCart} from "../context/Store"
