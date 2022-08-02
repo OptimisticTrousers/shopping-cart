@@ -659,6 +659,10 @@ button > img{
   }
 }
 
+footer {
+  position: sticky;
+}
+
 .footer-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(23%, 1fr));
