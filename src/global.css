@@ -44,6 +44,49 @@ html {
   padding-bottom: 4rem;
 }
 
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+  border-radius: 0.25rem;
+}
+
+.shimmer {
+  position: absolute;
+  animation: shimmer 1.5s infinite;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.shimmer__inner {
+  width: 50%;
+  height: 100%;
+  transform: skew(-15deg);
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.1);
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-150%);
+  }
+  50% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background: #272729;
+  }
+  100% {
+    background: #343536;
+  }
+}
+
 body {
   min-height: 100%;
   margin: 0;
@@ -163,6 +206,7 @@ nav {
 
 .image-detail-view {
   background-color: white;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
   height: min-content;
   padding: 3rem;
 }
@@ -236,9 +280,52 @@ nav {
 .products > a {
   text-decoration: none;
 }
+.error {
+  min-height: 100vh;
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+.error__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error__number {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 800;
+  font-family: "Inter";
+  margin-bottom: 0.5rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.error__break {
+  width: 136px;
+  margin: 1rem 0;
+}
+
+.error__message {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.error__link {
+  text-decoration: underline;
+}
+
+.error__link:hover {
+  text-decoration: none;
+}
 .product {
-  border-radius: 20px;
+  border-radius: 8px;
   color: black;
   background-color: white;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
@@ -280,7 +367,6 @@ nav {
 }
 
 .product-title {
-  text-align: center;
   padding-bottom: 1rem;
 }
 
@@ -298,6 +384,60 @@ nav img {
   width: 10%;
   height: 20px;
 }
+.skeleton {
+  width: 320px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.skeleton__image {
+  width: 100%;
+  height: 380px;
+  flex-shrink: 0;
+  background-color: rgb(229, 231, 235);
+  border-bottom: 2px solid #f5f3ff;
+}
+.skeleton__details {
+  padding: 1rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  justify-content: center;
+}
+.skeleton__review {
+  width: 40%;
+  height: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  background-color: rgb(229, 231, 235);
+}
+.skeleton__title {
+  width: 100%;
+  height: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  background-color: rgb(229, 231, 235);
+}
+.skeleton__description {
+  width: 30%;
+  height: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  background-color: rgb(229, 231, 235);
+}
+.skeleton__price {
+  width: 20%;
+  height: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  background-color: rgb(229, 231, 235);
+}
 .logo {
   display: flex;
   align-items: center;
@@ -313,7 +453,7 @@ nav img {
   display: flex;
   justify-content: center;
   padding: 3rem 0rem;
-  border-bottom: 3px solid #f5f3ff;
+  border-bottom: 2px solid #f5f3ff;
 }
 
 nav {
@@ -582,16 +722,18 @@ nav a {
 }
 
 nav a:hover {
-  opacity: 0.8;
+  opacity: 0.6;
   cursor: pointer;
 }
 
 nav span {
   font-family: heinemann-bold;
-  padding: 0.25rem;
+  padding: 6px 8px;
   margin-right: 0.2rem;
-  background-color: #b7b7b7;
-  border-radius: 1000px;
+  border: 2px solid #efefef;
+  background-color: #f5f9ff;
+  border-radius: 30px;
+  color: #333;
 }
 
 .buttons > a button:hover {
@@ -634,7 +776,7 @@ button > img {
     #330867 100%
   );
   color: transparent;
-  animation: shimmer 3s infinite alternate-reverse;
+  animation: shimmy 3s infinite alternate-reverse;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -694,7 +836,7 @@ button > img {
   }
 }
 
-@keyframes shimmer {
+@keyframes shimmy {
   0% {
     background-position: -500px 0;
   }
@@ -761,6 +903,7 @@ footer input {
   color: black;
   font-size: ui-sans-serif;
   align-self: center;
+  cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
     rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
@@ -768,7 +911,6 @@ footer input {
 .newsletter-button:hover {
   color: white;
   background-color: black;
-  transform: scale(1.05);
 }
 
 footer a {
