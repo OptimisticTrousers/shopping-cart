@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./global.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import Shop from "./components/Shop";
 import Home from "./components/Home";
 import Cart from "./components/Cart";
@@ -12,7 +12,7 @@ import ProductDetail from "./components/ProductDetail";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
@@ -21,7 +21,7 @@ root.render(
           <Route path="cart" element={<Cart />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
 
