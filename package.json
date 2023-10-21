@@ -2,7 +2,7 @@
   "name": "shopping-cart",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://optimistictrousers.github.io/TOP-shopping-cart",
+  "homepage": "https://optimistictrousers.github.io/shopping-cart",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
