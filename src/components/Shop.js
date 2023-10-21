@@ -25,7 +25,7 @@ export default function Shop() {
     );
   });
 
-  if (!error) {
+  if (error) {
     return <Error message="Failed to load products. Please try again later." />;
   }
 

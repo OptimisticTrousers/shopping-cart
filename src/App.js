@@ -28,7 +28,7 @@ export default function App() {
       <CartProvider>
         <Navbar />
         <main>
-          <Outlet context={{products, loading, error}} />
+          <Outlet context={{ products, loading, error }} />
           <Footer />
         </main>
       </CartProvider>
